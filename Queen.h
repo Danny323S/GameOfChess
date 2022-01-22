@@ -3,7 +3,7 @@
 
 class Queen : public Piece {
 private:
-    void initializeMovePattern() override;
+    void checkMove() override;
 
 public:
     Queen(Color color);

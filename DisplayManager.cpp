@@ -1,6 +1,6 @@
 #include "DisplayManager.h"
 
-DisplayManager::DisplayManager(ChessBoard &chessboard) {
+DisplayManager::DisplayManager(Chessboard &chessboard) {
     this->chessboard = &chessboard;
 }
 

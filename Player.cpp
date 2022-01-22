@@ -5,7 +5,7 @@ Piece* Player::getSelectedPiece() {
 }
 
 
-Player::Player(Color color, ChessBoard &board) {
+Player::Player(Color color, Chessboard &board) {
     // z konsoli pobierana jest nazwa użytkownika, i przypisywana jest graczowi
     // przypisywany jest wektor bierek gracza
     // przypisywany jest wskaźnik na króla

@@ -3,7 +3,7 @@
 
 class Knight : public Piece {
 private:
-    void initializeMovePattern() override;
+    void checkMove() override;
 
 public:
     Knight(Color color);

@@ -3,9 +3,10 @@
 
 class Pawn : public RestrictedPiece {
 private:
-    bool en_passant;
-    void initializeMovePattern() override;
+    bool en_passant_move;
+    bool canBeCapturedEnPassant() override;
+    bool checkMove(Square *destination_square) override;
 
 public:
-    Pawn(Color color);
-};
+    Pawn(Color color, Chessboard &chessboard);
+}; 

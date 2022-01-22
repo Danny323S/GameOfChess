@@ -4,6 +4,6 @@ Rook::Rook(Color color) : RestrictedPiece(color) {
     this->type = Type::TRook;
 }
 
-void Rook::initializeMovePattern() {                                                   
+void Rook::checkMove() {                                                   
     std::cout << "move Rook\n";
 }

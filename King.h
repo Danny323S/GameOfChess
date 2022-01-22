@@ -3,7 +3,7 @@
 
 class King : public RestrictedPiece {
 private:
-    void initializeMovePattern() override;
+    void checkMove() override;
 
 public:
     King(Color color);

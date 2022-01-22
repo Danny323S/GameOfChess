@@ -2,21 +2,29 @@
 #include <bits/stdc++.h>
 #include <typeinfo>
 #include "Color.h"
+#include "ChessBoard.h"
 
 
 enum Type {TPiece, TPawn, TKing, TQueen, TRook, TBishop, TKnight};
 
 class Piece {
+private:
+    Color color;
+    Square *position;
+    Chessboard *chessboard; 
+
 protected:
     Type type;
-    Color color;
-    std::vector<std::pair <int, int>> move_pattern;
-
-    Piece(Color color);
-    virtual void initializeMovePattern() = 0;  
+    virtual bool checkMove(Square *destination_square) = 0;  
+    virtual bool canBeCapturedEnPassant();
 
 public:
+    Piece(Color color, Chessboard &chessboard);
+
     Color getColor(); 
     Type getType();
-    bool checkWithMovePattern(int actual_file, int actual_rank, int destination_file, int destination_rank);
+    Square* getPosition();
+    Chessboard* getChessboard();
+
+    void setPosition(Square *position);
 };

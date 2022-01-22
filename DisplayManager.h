@@ -7,7 +7,7 @@
 
 class DisplayManager {
 private:
-    ChessBoard *chessboard;
+    Chessboard *chessboard;
 
     void printDivider();
     void printEvenFile();
@@ -17,6 +17,6 @@ private:
     void printSquare(int x, int y);
     
 public:
-    DisplayManager(ChessBoard &chessboard);
+    DisplayManager(Chessboard &chessboard);
     void render();
 };

@@ -4,6 +4,6 @@ King::King(Color color) : RestrictedPiece(color) {
     this->type = Type::TKing;
 }
 
-void King::initializeMovePattern() {                                                   
+void King::checkMove() {                                                   
     std::cout << "move King\n";
 }

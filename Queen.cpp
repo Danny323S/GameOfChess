@@ -4,6 +4,6 @@ Queen::Queen(Color color) : Piece(color) {
     this->type = Type::TQueen;
 }
 
-void Queen::initializeMovePattern() {                                                   
+void Queen::checkMove() {                                                   
     std::cout << "move Queen\n";
 }

@@ -6,8 +6,9 @@ private:
     bool moved;
 
 protected:
-    RestrictedPiece(Color color);
+    RestrictedPiece(Color color, Chessboard &chessboard);
+    void hasMoved();
 
 public:
-    bool wasMoved();
+    bool wasItMoved();
 };

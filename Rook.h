@@ -3,7 +3,7 @@
 
 class Rook : public RestrictedPiece {
 private:
-    void initializeMovePattern() override;
+    void checkMove() override;
 
 public:
     Rook(Color color);

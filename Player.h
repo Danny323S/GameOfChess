@@ -7,20 +7,18 @@
 
 class Player {
 private:
-    Color color;
     std::string name;
-    std::vector<Piece*> pieces_set;
-    
-    ChessBoard* board;
+    Color color;
+    Chessboard* board;
+
     Piece* selected_piece;
-    Square* selected_piece_position;
-    King* king;
+
+    // std::vector<Piece*> pieces_set;
+    // King* king;
 
 public:
-
-    Piece* getSelectedPiece();
-
-    Player(Color color, ChessBoard &board);
+    Player(Color color, Chessboard &board);
     void selectPiece(int file, int rank); //select piece at selected Square
+    Piece* getSelectedPiece();
     bool movePiece(int file, int rank); //move selected piece at selected square; 
 };

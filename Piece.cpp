@@ -1,8 +1,9 @@
 #include "Piece.h"
 
-Piece::Piece(Color color) {
+Piece::Piece(Color color, Chessboard &chessboard) {
     this->color = color;
     this->type = Type::TPiece;
+    this->chessboard = &chessboard;
 }
 
 Color Piece::getColor() {
@@ -13,15 +14,18 @@ Type Piece::getType() {
     return this->type;
 }
 
-bool Piece::checkWithMovePattern(int actual_file, int actual_rank, int destination_file, int destination_rank) {
-    bool possible_move = false;
+Square* Piece::getPosition() {
+    return this->position;
+}
 
-    for (int i = 0; i < int(move_pattern.size()); i++) {
-        if(destination_file - actual_file == move_pattern[i].first &&  destination_rank - actual_rank == move_pattern[i].second) {
-            possible_move = true;
-            return possible_move;
-        }
-    }
+Chessboard* Piece::getChessboard() {
+    return this->chessboard;
+}
 
-    return possible_move;
+void Piece::setPosition(Square *position) {
+    this->position = position;
+}
+
+bool Piece::canBeCapturedEnPassant() {
+    return false;
 }

@@ -4,24 +4,20 @@
 
 #define DIMENSION 8
 
-class ChessBoard {
-    
+class Chessboard {
 private:
-    Square board[DIMENSION][DIMENSION];
-    
+    Square chessboard[DIMENSION][DIMENSION];
+
     // std::vector<Piece*> pieces;
     // std::vector<Piece> white_set;
     // std::vector<Piece> black_set;
-
-    bool isRankClear(Square &from, Square &to);
-    bool isFileClear(Square &from, Square &to);
-    bool isDiagonalClear(Square &from, Square &to);
-
 public: 
-    ChessBoard();
+    Chessboard();
     Square* getSquareAt(int rank, int file);
     
-    // bool move(Piece *piece_to_move, Square* piece_position, int destination_file, int destination_rank);
+    bool isRankClear(Square *from, Square *to);
+    bool isFileClear(Square *from, Square *to);
+    bool isDiagonalClear(Square *from, Square *to);
 
     void promote();
     void capture();

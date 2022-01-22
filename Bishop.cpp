@@ -4,6 +4,6 @@ Bishop::Bishop(Color color) : Piece(color) {
     this->type = Type::TBishop;
 }
 
-void Bishop::initializeMovePattern() {                                                   
+void Bishop::checkMove() {                                                   
     std::cout << "move Bishop\n";
 }

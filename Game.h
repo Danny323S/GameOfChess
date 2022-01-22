@@ -9,7 +9,7 @@ private:
     bool white_round;
     bool is_running;
 
-    ChessBoard board;
+    Chessboard board;
     DisplayManager display_manager;
 
     Player w_player;

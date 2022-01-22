@@ -1,9 +1,13 @@
 #include "RestrictedPiece.h"
 
-RestrictedPiece::RestrictedPiece(Color color) : Piece(color) {
+RestrictedPiece::RestrictedPiece(Color color, Chessboard &chessboard) : Piece(color, chessboard) {
     this->moved = false; 
 }
 
-bool RestrictedPiece::wasMoved() {
+void RestrictedPiece::hasMoved() {
+    moved == true;
+} 
+
+bool RestrictedPiece::wasItMoved() {
     return moved;
 }
