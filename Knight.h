@@ -3,8 +3,8 @@
 
 class Knight : public Piece {
 private:
-    void checkMove() override;
+    bool checkMove(Square *destination_square) override;
 
 public:
-    Knight(Color color);
+    Knight(Color color, Chessboard &chessboard);
 };

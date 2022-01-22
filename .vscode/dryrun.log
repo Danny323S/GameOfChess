@@ -1,16 +1,20 @@
-make.exe --dry-run --always-make --keep-going --print-directory
+make.exe --dry-run --keep-going --print-directory
 make.exe: Wej�cie do katalogu `d:/Studia/PJC/GameOfChess'
 g++ -I src/include -c -Wall -Wextra -g main.cpp
+ 
 g++ -I src/include -c -Wall -Wextra -g Game.cpp
 g++ -I src/include -c -Wall -Wextra -g DisplayManager.cpp
 g++ -I src/include -c -Wall -Wextra -g Player.cpp
 g++ -I src/include -c -Wall -Wextra -g ChessBoard.cpp
+ 
 g++ -I src/include -c -Wall -Wextra -g Square.cpp
+ 
 g++ -I src/include -c -Wall -Wextra -g King.cpp
 g++ -I src/include -c -Wall -Wextra -g Pawn.cpp
 g++ -I src/include -c -Wall -Wextra -g Knight.cpp
 g++ -I src/include -c -Wall -Wextra -g Bishop.cpp
 g++ -I src/include -c -Wall -Wextra -g Rook.cpp
+ 
 g++ -I src/include -c -Wall -Wextra -g Queen.cpp
 g++ -I src/include -c -Wall -Wextra -g RestrictedPiece.cpp
 g++ -I src/include -c -Wall -Wextra -g Piece.cpp

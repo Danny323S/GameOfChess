@@ -1,9 +1,9 @@
 #include "King.h"
 
-King::King(Color color) : RestrictedPiece(color) {
+King::King(Color color, Chessboard &chessboard) : RestrictedPiece(color, chessboard) {
     this->type = Type::TKing;
 }
 
-void King::checkMove() {                                                   
+bool King::checkMove(Square *destination_square)  {                                                   
     std::cout << "move King\n";
 }

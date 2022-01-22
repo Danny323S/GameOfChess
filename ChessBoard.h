@@ -1,7 +1,7 @@
 #pragma once
-#include "Square.h"
 #include <vector>
-
+#include "Square.h"
+#include "Piece.h"
 #define DIMENSION 8
 
 class Chessboard {

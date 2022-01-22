@@ -1,9 +1,9 @@
 #include "Knight.h"
 
-Knight::Knight(Color color) : Piece(color) {
+Knight::Knight(Color color, Chessboard &chessboard) : Piece(color, chessboard) {
     this->type = Type::TKnight;
 }
 
-void Knight::checkMove() {                                                   
+bool Knight::checkMove(Square *destination_square) {                                                   
     std::cout << "move Knight\n";
 }

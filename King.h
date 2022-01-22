@@ -3,8 +3,8 @@
 
 class King : public RestrictedPiece {
 private:
-    void checkMove() override;
+    bool checkMove(Square *destination_square) override;
 
 public:
-    King(Color color);
+    King(Color color, Chessboard &Chessboard);
 };

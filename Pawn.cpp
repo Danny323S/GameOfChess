@@ -4,8 +4,6 @@ Pawn::Pawn(Color color, Chessboard &chessboard) : RestrictedPiece(color, chessbo
     this->type = Type::TPawn;
 }
 
-//Jak sprawdzić czy bierka była poruszona więcej niż jeden raz lub 2 razy 
-
 bool Pawn::canBeCapturedEnPassant() {
     if ((this->getColor() == white && this->getPosition()->getRank() == 3) || (this->getColor() == black && this->getPosition()->getRank() == 4)) {
         if (this->en_passant_move == true ) {
@@ -33,7 +31,6 @@ bool Pawn::checkMove(Square *destination_square) {
         y_direction = -1;
     }
 
-    // ruch o jeden w przód 
     if (destination_square->getFile() == this->getPosition()->getFile() && destination_square->getRank() == this->getPosition()->getRank() + 1*y_direction) {
         if (!destination_square->isOccupied())
             return true;
@@ -53,8 +50,32 @@ bool Pawn::checkMove(Square *destination_square) {
             this->en_passant_move = true;
             this->hasMoved();
         }
-    } else if (/*Biciei*/) {
-
+    } else if (destination_square->getFile() == this->getPosition()->getFile() + 1 && destination_square->getRank() == this->getPosition()->getRank() + 1*y_direction) {
+        if (destination_square->isOccupied()) {
+            if (destination_square->getOccupant()->getColor() != this->getColor())
+                return true;
+        } else {
+            if (getChessboard()->getSquareAt(this->getPosition()->getFile() + 1, this->getPosition()->getRank())->isOccupied()) {
+                if (getChessboard()->getSquareAt(this->getPosition()->getFile() + 1, this->getPosition()->getRank())->getOccupant()->canBeCapturedEnPassant()) {
+                    if (getChessboard()->getSquareAt(this->getPosition()->getFile() + 1, this->getPosition()->getRank())->getOccupant()->getColor() != this->getColor()) {
+                        return true;
+                    }
+                }
+            }
+        }
+    } else if (destination_square->getFile() == this->getPosition()->getFile() - 1 && destination_square->getRank() == this->getPosition()->getRank() + 1*y_direction) {
+        if (destination_square->isOccupied()) {
+            if (destination_square->getOccupant()->getColor() != this->getColor())
+                return true;
+        } else {
+            if (getChessboard()->getSquareAt(this->getPosition()->getFile() - 1, this->getPosition()->getRank())->isOccupied()) {
+                if (getChessboard()->getSquareAt(this->getPosition()->getFile() - 1, this->getPosition()->getRank())->getOccupant()->canBeCapturedEnPassant()) {
+                    if (getChessboard()->getSquareAt(this->getPosition()->getFile() - 1, this->getPosition()->getRank())->getOccupant()->getColor() != this->getColor()) {
+                        return true;
+                    }
+                }
+            }
+        }
     }
 }
 

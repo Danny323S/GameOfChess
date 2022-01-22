@@ -8,7 +8,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # Ten program zosta� zbudowany dla i386-pc-mingw32
  
 
-# Baza danych Make, wy�wietlana na Wed Jan 19 23:02:57 2022
+# Baza danych Make, wy�wietlana na Sat Jan 22 22:34:46 2022
 
 # Zmienne
 
@@ -62,7 +62,7 @@ PROGRAMW6432 = C:\Program Files
 # �rodowiskowa
 PROGRAMDATA = C:\ProgramData
 # �rodowiskowa
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-afed5c03-e3c5-4a2a-a87f-18ef5028e6a8-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-9035cf4f-f6b6-4925-8c2f-ab153b1ffe74-sock
 # �rodowiskowa
 VSCODE_CWD = D:\Studia\PJC\GameOfChess
 # �rodowiskowa
@@ -86,7 +86,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatyczna
 %F = $(notdir $%)
 # �rodowiskowa
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_18060_DIGJHUVXTNDENLNU
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_14016_HTJCDDXEFWFHBLMY
 # �rodowiskowa
 VSCODE_PIPE_LOGGING = true
 # �rodowiskowa
@@ -198,7 +198,7 @@ LANG = C
 # �rodowiskowa
 PROCESSOR_LEVEL = 23
 # �rodowiskowa
-VSCODE_PID = 18060
+VSCODE_PID = 14016
 # �rodowiskowa
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-KBOV4AJ0
 # statystyki tablic haszuj�cych ustawionych zmiennych:
@@ -218,7 +218,7 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-KBOV4AJ0
 # D:\Programs\Git\cmd (klucz D:/Programs/Git/cmd, czas modyfikacji 1636326273): 8 pliki, nie niemo�liwo�ci.
 # C:\WINDOWS\System32\WindowsPowerShell\v1.0\ (klucz C:/WINDOWS/System32/WindowsPowerShell/v1.0/, czas modyfikacji 1631236738): 30 pliki, nie niemo�liwo�ci.
 # C:\WINDOWS\System32\Wbem (klucz C:/WINDOWS/System32/Wbem, czas modyfikacji 1642271460): 155 pliki, nie niemo�liwo�ci.
-# . (klucz d:/Studia/PJC/GameOfChess, czas modyfikacji 1642629739): 50 pliki, nie niemo�liwo�ci.
+# . (klucz d:/Studia/PJC/GameOfChess, czas modyfikacji 1642887230): 37 pliki, nie niemo�liwo�ci.
 # D:\Programs\Anaconda3\Library\usr\bin: stat() zwraca b��d.
 # C:\Users\huawei\AppData\Local\Programs\Python\Python310\ (klucz C:/Users/huawei/AppData/Local/Programs/Python/Python310/, czas modyfikacji 1639307250): 19 pliki, nie niemo�liwo�ci.
 # D:\Programs\Anaconda3\Library\bin (klucz D:/Programs/Anaconda3/Library/bin, czas modyfikacji 1639337225): 451 pliki, nie niemo�liwo�ci.
@@ -226,7 +226,7 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-KBOV4AJ0
 # C:\Program Files\dotnet\ (klucz C:/Program Files/dotnet/, czas modyfikacji 1641841606): 11 pliki, nie niemo�liwo�ci.
 # D:\Programs\Anaconda3\Scripts (klucz D:/Programs/Anaconda3/Scripts, czas modyfikacji 1639339561): 342 pliki, nie niemo�liwo�ci.
 # C:\MinGW\bin (klucz C:/MinGW/bin, czas modyfikacji 1635235823): 144 pliki, nie niemo�liwo�ci.
-# C:\Program Files\MySQL\MySQL Shell 8.0\bin\ (klucz C:/Program Files/MySQL/MySQL Shell 8.0/bin/, czas modyfikacji 1642617912): 9 pliki, nie niemo�liwo�ci.
+# C:\Program Files\MySQL\MySQL Shell 8.0\bin\: stat() zwraca b��d.
 # D:\Programs\Anaconda3\Library\mingw-w64\bin (klucz D:/Programs/Anaconda3/Library/mingw-w64/bin, czas modyfikacji 1639337175): 15 pliki, nie niemo�liwo�ci.
 # C:\Users\huawei\.dotnet\tools: stat() zwraca b��d.
 # C:\WINDOWS\System32\OpenSSH\: stat() zwraca b��d.
@@ -237,14 +237,15 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-KBOV4AJ0
 # C:\WINDOWS (klucz C:/WINDOWS, czas modyfikacji 1641843223): 117 pliki, nie niemo�liwo�ci.
 # C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\ (klucz C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/, czas modyfikacji 1641841936): 7 pliki, nie niemo�liwo�ci.
 # C:\Program Files\Intel\WiFi\bin\ (klucz C:/Program Files/Intel/WiFi/bin/, czas modyfikacji 1611167193): 37 pliki, nie niemo�liwo�ci.
-# C:\Program Files\Common Files\Intel\WirelessCommon\ (klucz C:/Program Files/Common Files/Intel/WirelessCommon/, czas modyfikacji 1611167171): 7 pliki, nie niemo�liwo�ci.
-# C:\Users\huawei\AppData\Local\Microsoft\WindowsApps (klucz C:/Users/huawei/AppData/Local/Microsoft/WindowsApps, czas modyfikacji 1642029484): 28 pliki, nie niemo�liwo�ci.
+# C:\Program Files\Common Files\Intel\WirelessCommon\ (klucz C:/Program Files/Common Files/Intel/WirelessComm 
+on/, czas modyfikacji 1611167171): 7 pliki, nie niemo�liwo�ci.
+# C:\Users\huawei\AppData\Local\Microsoft\WindowsApps (klucz C:/Users/huawei/AppData/Local/Microsoft/WindowsApps, czas modyfikacji 1642880268): 28 pliki, nie niemo�liwo�ci.
 # C:\Program Files\Razer Chroma SDK\bin (klucz C:/Program Files/Razer Chroma SDK/bin, czas modyfikacji 1632983249): 4 pliki, nie niemo�liwo�ci.
 # D:\Programs\Microsoft VS Code\bin (klucz D:/Programs/Microsoft VS Code/bin, czas modyfikacji 1639751216): 4 pliki, nie niemo�liwo�ci.
-# C:\WINDOWS\system32 (klucz C:/WINDOWS/system32, czas modyfikacji 1642624918): 2909 pliki, nie niemo�liwo�ci.
+# C:\WINDOWS\system32 (klucz C:/WINDOWS/system32, czas modyfikacji 1642852356): 2909 pliki, nie niemo�liwo�ci.
 # C:\Program Files (x86)\GnuWin32\bin (klucz C:/Program Files (x86)/GnuWin32/bin, czas modyfikacji 1635895394): 5 pliki, nie niemo�liwo�ci.
 
-# 4677 pliki, nie niemo�liwo�ci w 33 katalogach.
+# 4655 pliki, nie niemo�liwo�ci w 33 katalogach.
 
 # Regu�y stadardowe
 
@@ -256,7 +257,8 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-KBOV4AJ0
 Pawn.cpp:
 #  Szukanie regu� domy�lnych nie zosta�o wykonane.
 #  Czas modyfikacji nie by� sprawdzany.
-#  Plik nie zosta� uaktualniony.
+#  Plik nie zosta� uaktu 
+alniony.
 
 Square.o: Square.cpp
 #  Szukanie regu� domy�lnych nie zosta�o wykonane.
@@ -333,17 +335,14 @@ Piece.o: Piece.cpp
 
 # To nie jest obiekt:
 Game.cpp:
-#  Szukanie regu� domy�lnych zosta�o wykonane.
-#  Ostatnio modyfikowany 2022-01-18 11:12:16
-#  Plik zosta� uaktualniony.
-#  Uaktualnienie powiod�o si�.
-# statystyki tablic haszuj�cych ustawionych zmiennych:
-# Wype�nienie=0/32=0%, Przehaszowania=0, Kolizje=0/0=0%
+#  Szukanie regu� domy�lnych nie zosta�o wykonane.
+#  Czas modyfikacji nie by� sprawdzany.
+#  Plik nie zosta� uaktualniony.
 
 # To nie jest obiekt:
 makefile:
 #  Szukanie regu� domy�lnych zosta�o wykonane.
-#  Ostatnio modyfikowany 2022-01-09 22:30:23
+#  Ostatnio modyfikowany 2022-01-22 22:33:52
 #  Plik zosta� uaktualniony.
 #  Uaktualnienie powiod�o si�.
 # statystyki tablic haszuj�cych ustawionych zmiennych:
@@ -382,12 +381,9 @@ Pawn.o: Pawn.cpp
 
 # To nie jest obiekt:
 DisplayManager.cpp:
-#  Szukanie regu� domy�lnych zosta�o wykonane.
-#  Ostatnio modyfikowany 2022-01-10 21:20:07
-#  Plik zosta� uaktualniony.
-#  Uaktualnienie powiod�o si�.
-# statystyki tablic haszuj�cych ustawionych zmiennych:
-# Wype�nienie=0/32=0%, Przehaszowania=0, Kolizje=0/0=0%
+#  Szukanie regu� domy�lnych nie zosta�o wykonane.
+#  Czas modyfikacji nie by� sprawdzany.
+#  Plik nie zosta� uaktualniony.
 
 # To nie jest obiekt:
 .SUFFIXES:
@@ -397,12 +393,9 @@ DisplayManager.cpp:
 
 # To nie jest obiekt:
 Player.cpp:
-#  Szukanie regu� domy�lnych zosta�o wykonane.
-#  Ostatnio modyfikowany 2022-01-18 12:30:47
-#  Plik zosta� uaktualniony.
-#  Uaktualnienie powiod�o si�.
-# statystyki tablic haszuj�cych ustawionych zmiennych:
-# Wype�nienie=0/32=0%, Przehaszowania=0, Kolizje=0/0=0%
+#  Szukanie regu� domy�lnych nie zosta�o wykonane.
+#  Czas modyfikacji nie by� sprawdzany.
+#  Plik nie zosta� uaktualniony.
 
 RestrictedPiece.o: RestrictedPiece.cpp
 #  Szukanie regu� domy�lnych nie zosta�o wykonane.
@@ -414,8 +407,7 @@ RestrictedPiece.o: RestrictedPiece.cpp
 
 # To nie jest obiekt:
 Square.cpp:
-#  Szukanie regu� domy�lnych nie zo 
-sta�o wykonane.
+#  Szukanie regu� domy�lnych nie zosta�o wykonane.
 #  Czas modyfikacji nie by� sprawdzany.
 #  Plik nie zosta� uaktualniony.
 
@@ -460,11 +452,8 @@ clean:
 
 Game.o: Game.cpp
 #  Szukanie regu� domy�lnych nie zosta�o wykonane.
-#  Ostatnio modyfikowany 2022-01-18 11:38:31
-#  Plik zosta� uaktualniony.
-#  Uaktualnienie powiod�o si�.
-# statystyki tablic haszuj�cych ustawionych zmiennych:
-# Wype�nienie=0/32=0%, Przehaszowania=0, Kolizje=0/0=0%
+#  Czas modyfikacji nie by� sprawdzany.
+#  Plik nie zosta� uaktualniony.
 #  polecenia do wykonania (z `makefile', linia 13):
 	$(CC) $(CFLAGS) Game.cpp
 	
@@ -479,11 +468,28 @@ Bishop.o: Bishop.cpp
 
 main.o: main.cpp
 #  Szukanie regu� domy�lnych nie zosta�o wykonane.
-#  Ostatnio modyfikowany 2022-01-18 11:38:29
+#  Ga��� wzorc�w domy�lnych/statycznych: `'
+#  Plik nie istnieje.
 #  Plik zosta� uaktualniony.
-#  Uaktualnienie powiod�o si�.
+#  Powinien by� uaktualniony (-q jest w��czone).
+# automatyczna
+# @ := main.o
+# automatyczna
+# % := 
+# automatyczna
+# * := 
+# automatyczna
+# + := main.cpp
+# automatyczna
+# | := 
+# automatyczna
+# < := main.cpp
+# automatyczna
+# ^ := main.cpp
+# automatyczna
+# ? := main.cpp
 # statystyki tablic haszuj�cych ustawionych zmiennych:
-# Wype�nienie=0/32=0%, Przehaszowania=0, Kolizje=0/0=0%
+# Wype�nienie=8/32=25%, Przehaszowania=0, Kolizje=1/12=8%
 #  polecenia do wykonania (z `makefile', linia 10):
 	$(CC) $(CFLAGS) main.cpp
 	
@@ -504,11 +510,8 @@ Queen.o: Queen.cpp
 
 DisplayManager.o: DisplayManager.cpp
 #  Szukanie regu� domy�lnych nie zosta�o wykonane.
-#  Ostatnio modyfikowany 2022-01-18 11:38:34
-#  Plik zosta� uaktualniony.
-#  Uaktualnienie powiod�o si�.
-# statystyki tablic haszuj�cych ustawionych zmiennych:
-# Wype�nienie=0/32=0%, Przehaszowania=0, Kolizje=0/0=0%
+#  Czas modyfikacji nie by� sprawdzany.
+#  Plik nie zosta� uaktualniony.
 #  polecenia do wykonania (z `makefile', linia 16):
 	$(CC) $(CFLAGS) DisplayManager.cpp
 	
@@ -527,28 +530,8 @@ RestrictedPiece.cpp:
 
 Player.o: Player.cpp
 #  Szukanie regu� domy�lnych nie zosta�o wykonane.
-#  Ga��� wzorc�w domy�lnych/statycznych: `'
-#  Ostatnio modyfikowany 2022-01-18 11:38:35
-#  Plik zosta� uaktualniony.
-#  Powinien by� uaktualniony (-q jest w��czone).
-# automatyczna
-# @ := Player.o
-# automatyczna
-# % := 
-# automatyczna
-# * := 
-# automatyczna
-# + := Player.cpp
-# automatyczna
-# | := 
-# automatyczna
-# < := Player.cpp
-# automatyczna
-# ^ := Player.cpp
-# automatyczna
-# ? := Player.cpp
-# statystyki tablic haszuj�cych ustawionych zmiennych:
-# Wype�nienie=8/32=25%, Przehaszowania=0, Kolizje=1/12=8%
+#  Czas modyfikacji nie by� sprawdzany.
+#  Plik nie zosta� uaktualniony.
 #  polecenia do wykonania (z `makefile', linia 19):
 	$(CC) $(CFLAGS) Player.cpp
 	
@@ -566,6 +549,6 @@ Player.o: Player.cpp
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Zako�czono tworzenie bazy danych Make na Wed Jan 19 23:02:57 2022
+# Zako�czono tworzenie bazy danych Make na Sat Jan 22 22:34:46 2022
 
  

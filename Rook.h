@@ -3,8 +3,8 @@
 
 class Rook : public RestrictedPiece {
 private:
-    void checkMove() override;
+    bool Rook::checkMove(Square *destination_square) override;
 
 public:
-    Rook(Color color);
+    Rook(Color color, Chessboard &chessboard);
 };

@@ -3,8 +3,8 @@
 
 class Bishop : public Piece {
 private:
-    void checkMove() override;
+    bool checkMove(Square *destination_square) override;
 
 public:
-    Bishop(Color color);
+    Bishop(Color color, Chessboard &chessboard);
 };

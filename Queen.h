@@ -3,8 +3,8 @@
 
 class Queen : public Piece {
 private:
-    void checkMove() override;
+    bool Queen::checkMove(Square *destination_square) override;
 
 public:
-    Queen(Color color);
+    Queen(Color color, Chessboard &chessboard);
 };

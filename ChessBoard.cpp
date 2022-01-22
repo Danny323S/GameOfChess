@@ -9,42 +9,42 @@ Chessboard::Chessboard() {
     }
     
 //BLACK SET   
-    chessboard[0][7].setOccupant(new Rook(black));
-    chessboard[1][7].setOccupant(new Knight(black));
-    chessboard[2][7].setOccupant(new Bishop(black));
-    chessboard[3][7].setOccupant(new Queen(black));
-    chessboard[4][7].setOccupant(new King(black));
-    chessboard[5][7].setOccupant(new Bishop(black));
-    chessboard[6][7].setOccupant(new Knight(black));
-    chessboard[7][7].setOccupant(new Rook(black));
+    chessboard[0][7].setOccupant(new Rook(black, this));
+    chessboard[1][7].setOccupant(new Knight(black, this));
+    chessboard[2][7].setOccupant(new Bishop(black, this));
+    chessboard[3][7].setOccupant(new Queen(black, this));
+    chessboard[4][7].setOccupant(new King(black, this));
+    chessboard[5][7].setOccupant(new Bishop(black, this));
+    chessboard[6][7].setOccupant(new Knight(black, this));
+    chessboard[7][7].setOccupant(new Rook(black, this));
 
-    chessboard[0][6].setOccupant(new Pawn(black));
-    chessboard[1][6].setOccupant(new Pawn(black));
-    chessboard[2][6].setOccupant(new Pawn(black));
-    chessboard[3][6].setOccupant(new Pawn(black));
-    chessboard[4][6].setOccupant(new Pawn(black));
-    chessboard[5][6].setOccupant(new Pawn(black));
-    chessboard[6][6].setOccupant(new Pawn(black));
-    chessboard[7][6].setOccupant(new Pawn(black));
+    chessboard[0][6].setOccupant(new PPawn(black, this));
+    chessboard[1][6].setOccupant(new Pawn(black, this));
+    chessboard[2][6].setOccupant(new Pawn(black, this));
+    chessboard[3][6].setOccupant(new Pawn(black, this));
+    chessboard[4][6].setOccupant(new Pawn(black, this));
+    chessboard[5][6].setOccupant(new Pawn(black, this));
+    chessboard[6][6].setOccupant(new Pawn(black, this));
+    chessboard[7][6].setOccupant(new Pawn(black, this));
 
 //WHITE SET
-    chessboard[0][0].setOccupant(new Rook(white));
-    chessboard[1][0].setOccupant(new Knight(white));
-    chessboard[2][0].setOccupant(new Bishop(white));
-    chessboard[3][0].setOccupant(new Queen(white));
-    chessboard[4][0].setOccupant(new King(white));
-    chessboard[5][0].setOccupant(new Bishop(white));
-    chessboard[6][0].setOccupant(new Knight(white));
-    chessboard[7][0].setOccupant(new Rook(white));
+    chessboard[0][0].setOccupant(new Rook(white, this));
+    chessboard[1][0].setOccupant(new Knight(white, this));
+    chessboard[2][0].setOccupant(new Bishop(white, this));
+    chessboard[3][0].setOccupant(new Queen(white, this));
+    chessboard[4][0].setOccupant(new King(white, this));
+    chessboard[5][0].setOccupant(new Bishop(white, this));
+    chessboard[6][0].setOccupant(new Knight(white, this));
+    chessboard[7][0].setOccupant(new Rook(white, this));
 
-    chessboard[0][1].setOccupant(new Pawn(white));
-    chessboard[1][1].setOccupant(new Pawn(white));
-    chessboard[2][1].setOccupant(new Pawn(white));
-    chessboard[3][1].setOccupant(new Pawn(white));
-    chessboard[4][1].setOccupant(new Pawn(white));
-    chessboard[5][1].setOccupant(new Pawn(white));
-    chessboard[6][1].setOccupant(new Pawn(white));
-    chessboard[7][1].setOccupant(new Pawn(white));
+    chessboard[0][1].setOccupant(new Pawn(white, this));
+    chessboard[1][1].setOccupant(new Pawn(white, this));
+    chessboard[2][1].setOccupant(new Pawn(white, this));
+    chessboard[3][1].setOccupant(new Pawn(white, this));
+    chessboard[4][1].setOccupant(new Pawn(white, this));
+    chessboard[5][1].setOccupant(new Pawn(white, this));
+    chessboard[6][1].setOccupant(new Pawn(white, this));
+    chessboard[7][1].setOccupant(new Pawn(white, this));
 }
 
 bool Chessboard::isRankClear(Square &from, Square &to) {
@@ -70,6 +70,11 @@ bool Chessboard::isRankClear(Square &from, Square &to) {
 }
 
 Square* Chessboard::getSquareAt(int file , int rank) {
+    if (!((0 <= file <= 7) && (0 <= rank <= 7))) {
+        return NULL;
+    }
+
+
     return &chessboard[file][rank];
 }
 

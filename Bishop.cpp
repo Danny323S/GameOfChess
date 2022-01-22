@@ -1,9 +1,9 @@
 #include "Bishop.h"
 
-Bishop::Bishop(Color color) : Piece(color) {
+Bishop::Bishop(Color color, Chessboard &chessboard) : Piece(color, chessboard) {
     this->type = Type::TBishop;
 }
 
-void Bishop::checkMove() {                                                   
+bool Bishop::checkMove(Square *destination_square) {                                                   
     std::cout << "move Bishop\n";
 }
