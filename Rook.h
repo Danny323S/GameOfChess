@@ -1,10 +1,13 @@
-#pragma once
+#ifndef ROOK_H
+#define ROOK_H
 #include "RestrictedPiece.h"
 
 class Rook : public RestrictedPiece {
 private:
-    bool Rook::checkMove(Square *destination_square) override;
+    bool checkMove(Square *destination_square) override;
 
 public:
-    Rook(Color color, Chessboard &chessboard);
+    Rook(Color color, Chessboard *chessboard);
 };
+
+#endif

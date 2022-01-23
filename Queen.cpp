@@ -1,6 +1,6 @@
 #include "Queen.h"
 
-Queen::Queen(Color color, Chessboard &chessboard) : Piece(color, chessboard) {
+Queen::Queen(Color color, Chessboard *chessboard) : Piece(color, chessboard) {
     this->type = Type::TQueen;
 }
 

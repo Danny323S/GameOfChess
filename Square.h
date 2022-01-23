@@ -1,11 +1,7 @@
-#pragma once 
-#include "Piece.h"
-#include "Rook.h"
-#include "King.h"
-#include "Bishop.h"
-#include "Queen.h"
-#include "Knight.h"
-#include "Pawn.h"
+#ifndef SQUARE_H
+#define SQUARE_H
+
+class Piece;
 
 class Square {
 private:
@@ -24,3 +20,5 @@ public:
     void setOccupant(Piece *occupant);
     Piece* getOccupant();
 };
+
+#endif

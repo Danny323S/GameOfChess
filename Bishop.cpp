@@ -1,6 +1,6 @@
 #include "Bishop.h"
 
-Bishop::Bishop(Color color, Chessboard &chessboard) : Piece(color, chessboard) {
+Bishop::Bishop(Color color, Chessboard *chessboard) : Piece(color, chessboard) {
     this->type = Type::TBishop;
 }
 

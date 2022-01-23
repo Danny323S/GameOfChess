@@ -18,7 +18,7 @@ Chessboard::Chessboard() {
     chessboard[6][7].setOccupant(new Knight(black, this));
     chessboard[7][7].setOccupant(new Rook(black, this));
 
-    chessboard[0][6].setOccupant(new PPawn(black, this));
+    chessboard[0][6].setOccupant(new Pawn(black, this));
     chessboard[1][6].setOccupant(new Pawn(black, this));
     chessboard[2][6].setOccupant(new Pawn(black, this));
     chessboard[3][6].setOccupant(new Pawn(black, this));
@@ -47,21 +47,21 @@ Chessboard::Chessboard() {
     chessboard[7][1].setOccupant(new Pawn(white, this));
 }
 
-bool Chessboard::isRankClear(Square &from, Square &to) {
-    if(from.getRank() < to.getRank()){
-        for (int i = from.getRank(); i <= to.getRank(); i++) {
-            if (chessboard[i][from.getFile()].isOccupied()) {
+bool Chessboard::isRankClear(Square *from, Square *to) {
+    if(from->getRank() < to->getRank()){
+        for (int i = from->getRank(); i <= to->getRank(); i++) {
+            if (chessboard[i][from->getFile()].isOccupied()) {
                 return false;
             }
         }
-    } else if (from.getRank() > to.getRank()) {
-        for (int i = from.getRank(); i >= to.getRank(); i--) {
-            if (chessboard[i][from.getFile()].isOccupied()) {
+    } else if (from->getRank() > to->getRank()) {
+        for (int i = from->getRank(); i >= to->getRank(); i--) {
+            if (chessboard[i][from->getFile()].isOccupied()) {
                 return false;
             }
         }
     } else {
-        if (chessboard[from.getRank()][from.getFile()].isOccupied()) {
+        if (chessboard[from->getRank()][from->getFile()].isOccupied()) {
             return false;
         }
     }

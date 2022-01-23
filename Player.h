@@ -1,9 +1,9 @@
-#pragma once
+#ifndef PLAYER_H
+#define PLAYER_H
 #include <string>
 #include <vector>
-#include "ChessBoard.h"
 #include "Piece.h"
-#include "Color.h"
+
 
 class Player {
 private:
@@ -22,3 +22,5 @@ public:
     Piece* getSelectedPiece();
     bool movePiece(int file, int rank); //move selected piece at selected square; 
 };
+
+#endif

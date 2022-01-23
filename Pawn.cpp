@@ -1,6 +1,6 @@
 #include "Pawn.h"
 
-Pawn::Pawn(Color color, Chessboard &chessboard) : RestrictedPiece(color, chessboard) {
+Pawn::Pawn(Color color, Chessboard *chessboard) : RestrictedPiece(color, chessboard) {
     this->type = Type::TPawn;
 }
 
@@ -43,9 +43,9 @@ bool Pawn::checkMove(Square *destination_square) {
         //1.en_passant_move == true 
         //2.zmiana wasMove == true
         if(!this->wasItMoved()) {
-            if(getChessboard()->isFileClear(this->getPosition(), destination_square) == true && destination_square->isOccupied() == false) {
-                return true;
-            }
+            // if(getChessboard()->isFileClear(this->getPosition(), destination_square) == true && destination_square->isOccupied() == false) {
+            //     return true;
+            // }
 
             this->en_passant_move = true;
             this->hasMoved();

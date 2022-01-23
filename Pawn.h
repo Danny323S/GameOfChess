@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PAWN_H
+#define PAWN_H
 #include "RestrictedPiece.h"
 
 class Pawn : public RestrictedPiece {
@@ -8,5 +9,7 @@ private:
     bool checkMove(Square *destination_square) override;
 
 public:
-    Pawn(Color color, Chessboard &chessboard);
+    Pawn(Color color, Chessboard *chessboard);
 }; 
+
+#endif

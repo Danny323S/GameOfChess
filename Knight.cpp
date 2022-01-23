@@ -1,6 +1,6 @@
 #include "Knight.h"
 
-Knight::Knight(Color color, Chessboard &chessboard) : Piece(color, chessboard) {
+Knight::Knight(Color color, Chessboard *chessboard) : Piece(color, chessboard) {
     this->type = Type::TKnight;
 }
 

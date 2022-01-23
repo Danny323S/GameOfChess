@@ -1,6 +1,6 @@
 #include "King.h"
 
-King::King(Color color, Chessboard &chessboard) : RestrictedPiece(color, chessboard) {
+King::King(Color color, Chessboard *chessboard) : RestrictedPiece(color, chessboard) {
     this->type = Type::TKing;
 }
 

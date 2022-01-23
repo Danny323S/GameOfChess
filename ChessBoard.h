@@ -1,8 +1,12 @@
-#pragma once
+#ifndef CHESSBOARD_H
+#define CHESSBOARD_H
 #include <vector>
-#include "Square.h"
 #include "Piece.h"
+#include "Square.h"
+
 #define DIMENSION 8
+
+
 
 class Chessboard {
 private:
@@ -22,3 +26,5 @@ public:
     void promote();
     void capture();
 };
+
+#endif

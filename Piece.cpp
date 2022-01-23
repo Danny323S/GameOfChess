@@ -1,9 +1,9 @@
 #include "Piece.h"
 
-Piece::Piece(Color color, Chessboard &chessboard) {
+Piece::Piece(Color color, Chessboard *chessboard) {
     this->color = color;
     this->type = Type::TPiece;
-    this->chessboard = &chessboard;
+    this->chessboard = chessboard;
 }
 
 Color Piece::getColor() {

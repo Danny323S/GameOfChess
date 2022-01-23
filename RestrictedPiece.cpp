@@ -1,6 +1,6 @@
 #include "RestrictedPiece.h"
 
-RestrictedPiece::RestrictedPiece(Color color, Chessboard &chessboard) : Piece(color, chessboard) {
+RestrictedPiece::RestrictedPiece(Color color, Chessboard *chessboard) : Piece(color, chessboard) {
     this->moved = false; 
 }
 

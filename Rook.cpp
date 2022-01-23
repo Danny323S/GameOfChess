@@ -1,6 +1,6 @@
 #include "Rook.h"
 
-Rook::Rook(Color color, Chessboard &chessboard) : RestrictedPiece(color, chessboard) {
+Rook::Rook(Color color, Chessboard *chessboard) : RestrictedPiece(color, chessboard) {
     this->type = Type::TRook;
 }
 

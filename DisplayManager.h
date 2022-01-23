@@ -1,4 +1,6 @@
-#pragma once
+#ifndef DISPLAYMANAGER_H
+#define DISPLAYMANAGER_H
+
 #include <string>
 #include <typeinfo>
 #include <iostream>
@@ -20,3 +22,5 @@ public:
     DisplayManager(Chessboard &chessboard);
     void render();
 };
+
+#endif

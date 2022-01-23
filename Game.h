@@ -1,8 +1,9 @@
-#pragma once 
+#ifndef GAME_H
+#define GAME_H
+#include <string.h>
 #include "DisplayManager.h"
 #include "Player.h"
 #include "ChessBoard.h"
-#include <string.h>
 
 class Game {
 private:
@@ -20,3 +21,5 @@ public:
     bool run();
     void control();    
 };
+
+#endif
