@@ -2,13 +2,13 @@
 #define PIECE_H
 #include <bits/stdc++.h>
 #include <typeinfo>
-
 #include "Color.h"
-#include "ChessBoard.h"
+
+// #include "ChessBoard.h"
 #include "Square.h"
 
 // class Square;// forward-declaration
-// class Chessboard;// forward-declaration
+class Chessboard;// forward-declaration
 
 enum Type {TPiece, TPawn, TKing, TQueen, TRook, TBishop, TKnight};
 

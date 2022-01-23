@@ -2,10 +2,15 @@
 #define CHESSBOARD_H
 #include <vector>
 #include "Piece.h"
+#include "Rook.h"
+#include "King.h"
+#include "Knight.h"
+#include "Queen.h"
+#include "Pawn.h"
+#include "Bishop.h"
 #include "Square.h"
 
 #define DIMENSION 8
-
 
 
 class Chessboard {

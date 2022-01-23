@@ -1,8 +1,9 @@
 #include "Square.h"
+
 Square::Square(int file, int rank) {
     this->rank = rank;
     this->file = file;
-    occupant = NULL;
+    occupant = nullptr;
 }
 
 int Square::getRank() {
@@ -14,7 +15,7 @@ int Square::getFile() {
 }
 
 bool Square::isOccupied() {
-    if (occupant == NULL) {
+    if (occupant == nullptr) {
         return false;
     } else {
         return true;

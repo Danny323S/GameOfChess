@@ -48,12 +48,10 @@ RestrictedPiece.o: RestrictedPiece.cpp
 Piece.o: Piece.cpp
 	$(CC) $(CFLAGS) Piece.cpp
 
-.PHONY : clean
+#.PHONY : clean
+
 clean:
-	del *.o GameOfChess
+	del *.o GameOfChess.exe
 
 run:
 	./GameOfChess
-
-#clean:
-#	Remove-Item * -Include *.o

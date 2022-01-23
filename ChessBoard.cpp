@@ -7,7 +7,7 @@ Chessboard::Chessboard() {
             chessboard[x][y] = Square(x, y);
         }
     }
-    
+
 //BLACK SET   
     chessboard[0][7].setOccupant(new Rook(black, this));
     chessboard[1][7].setOccupant(new Knight(black, this));
@@ -47,6 +47,14 @@ Chessboard::Chessboard() {
     chessboard[7][1].setOccupant(new Pawn(white, this));
 }
 
+Square* Chessboard::getSquareAt(int file , int rank) {
+    if (((0 <= file) && (file <= 7)) && ((0 <= rank) && (rank <= 7)) == false) {
+        return NULL;
+    }
+
+    return &chessboard[file][rank];
+}
+
 bool Chessboard::isRankClear(Square *from, Square *to) {
     if(from->getRank() < to->getRank()){
         for (int i = from->getRank(); i <= to->getRank(); i++) {
@@ -69,12 +77,20 @@ bool Chessboard::isRankClear(Square *from, Square *to) {
     return true;
 }
 
-Square* Chessboard::getSquareAt(int file , int rank) {
-    if (!((0 <= file <= 7) && (0 <= rank <= 7))) {
-        return NULL;
-    }
-
-
-    return &chessboard[file][rank];
+bool Chessboard::isFileClear(Square *from, Square *to) {
+    from->getRank();
+    to->getRank();
+    return false;
 }
+
+bool Chessboard::isDiagonalClear(Square *from, Square *to) {
+    from->getRank();
+    to->getRank();
+    return false;
+}
+
+
+
+
+
 

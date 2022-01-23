@@ -1,6 +1,6 @@
 #include "Game.h"
 
-Game::Game() : display_manager(board), w_player(white ,board), b_player(black ,board), board() {
+Game::Game() : board(), display_manager(board), w_player(white ,board), b_player(black ,board) {
     is_running = true;
     white_round = true;
 
@@ -12,6 +12,8 @@ bool Game::run() {
         display_manager.render();
         control();
     }
+
+    return false;
 }
 
 void Game::control() {

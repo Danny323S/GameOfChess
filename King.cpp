@@ -5,5 +5,6 @@ King::King(Color color, Chessboard *chessboard) : RestrictedPiece(color, chessbo
 }
 
 bool King::checkMove(Square *destination_square)  {                                                   
-    std::cout << "move King\n";
+    destination_square->getRank();                     
+    return false;
 }
