@@ -4,7 +4,6 @@ Knight::Knight(Color color, Chessboard *chessboard) : Piece(color, chessboard) {
     this->type = Type::TKnight;
 }
 
-bool Knight::checkMove(Square *destination_square) { 
-    destination_square->getRank();                     
+bool Knight::checkMove(int de_file, int de_rank) {                 
     return false;
 }

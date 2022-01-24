@@ -5,7 +5,7 @@ Pawn::Pawn(Color color, Chessboard *chessboard) : RestrictedPiece(color, chessbo
 }
 
 bool Pawn::canBeCapturedEnPassant() {
-    if ((this->getColor() == white && this->getPosition()->getRank() == 3) || (this->getColor() == black && this->getPosition()->getRank() == 4)) {
+    if ((this->getColor() == white && this->getRank() == 3) || (this->getColor() == black && this->getRank() == 4)) {
         if (this->en_passant_move == true ) {
             return true;
         }
@@ -13,7 +13,7 @@ bool Pawn::canBeCapturedEnPassant() {
     return false;
 }
 
-bool Pawn::checkMove(Square *destination_square) {
+bool Pawn::checkMove(int de_file, int de_rank) {
 //Możliwe ruchy 
 //BIAŁY PION (0,1) - ruch podstawowy. możliwy jeżeli na polu nie stoi żaden inny pionek 
 //           (0,2) - ruch specjalny, możliwy jeżeli bierka nie była wcześniej ruszona (wasItMoved == false), jeżeli pole po drodze jest puste i to pole także, 
@@ -31,10 +31,10 @@ bool Pawn::checkMove(Square *destination_square) {
         y_direction = -1;
     }
 
-    if (destination_square->getFile() == this->getPosition()->getFile() && destination_square->getRank() == this->getPosition()->getRank() + 1*y_direction) {
-        if (!destination_square->isOccupied())
+    if (de_file == this->getFile() && de_rank == this->getRank() + 1*y_direction) {
+        if (!getChessboard()->getSquareAt(de_file, de_rank)->isOccupied())
             return true;
-    } else if (destination_square->getFile() == this->getPosition()->getFile() && destination_square->getRank() == this->getPosition()->getRank() + 2*y_direction) {
+    } else if (de_file == this->getFile() && de_rank == this->getRank() + 2*y_direction) {
         //sprwdzenie czy pionek był ruszany 
         //sprawdzenie czy na drodze nie stoi żadna inna bierka
         //sprawdzenei czy pole "destination" nie jest zajmowane przez inny pionek
@@ -43,39 +43,40 @@ bool Pawn::checkMove(Square *destination_square) {
         //1.en_passant_move == true 
         //2.zmiana wasMove == true
         if(!this->wasItMoved()) {
-            if(getChessboard()->isFileClear(this->getPosition(), destination_square) == true && destination_square->isOccupied() == false) {
+            if(getChessboard()->isFileClear(this->getFile(), this->getRank() + 1, de_rank) == true) {
+                this->en_passant_move = true;
+                this->hasMoved(); //Powinno być w klasie gracza
                 return true;
             }
-
-            this->en_passant_move = true;
-            this->hasMoved();
         }
-    } else if (destination_square->getFile() == this->getPosition()->getFile() + 1 && destination_square->getRank() == this->getPosition()->getRank() + 1*y_direction) {
-        if (destination_square->isOccupied()) {
-            if (destination_square->getOccupant()->getColor() != this->getColor())
+    } else if (de_file == this->getFile() + 1 && de_rank == this->getRank() + 1*y_direction) {
+        if (getChessboard()->getSquareAt(de_file, de_rank)->isOccupied()) {
+            if (getChessboard()->getSquareAt(de_file, de_rank)->getOccupant()->getColor() != this->getColor())
                 return true;
         } else {
-            if (getChessboard()->getSquareAt(this->getPosition()->getFile() + 1, this->getPosition()->getRank())->isOccupied()) {
-                if (getChessboard()->getSquareAt(this->getPosition()->getFile() + 1, this->getPosition()->getRank())->getOccupant()->canBeCapturedEnPassant()) {
-                    if (getChessboard()->getSquareAt(this->getPosition()->getFile() + 1, this->getPosition()->getRank())->getOccupant()->getColor() != this->getColor()) {
+            if (getChessboard()->getSquareAt(this->getFile() + 1, this->getRank())->isOccupied()) {
+                if (getChessboard()->getSquareAt(this->getFile() + 1, this->getRank())->getOccupant()->canBeCapturedEnPassant()) {
+                    if (getChessboard()->getSquareAt(this->getFile() + 1, this->getRank())->getOccupant()->getColor() != this->getColor()) {
                         return true;
                     }
                 }
             }
         }
-    } else if (destination_square->getFile() == this->getPosition()->getFile() - 1 && destination_square->getRank() == this->getPosition()->getRank() + 1*y_direction) {
-        if (destination_square->isOccupied()) {
-            if (destination_square->getOccupant()->getColor() != this->getColor())
+    } else if (de_file == this->getFile() - 1 && de_rank == this->getRank() + 1*y_direction) {
+        if (getChessboard()->getSquareAt(de_file, de_rank)->isOccupied()) {
+            if (getChessboard()->getSquareAt(de_file, de_rank)->getOccupant()->getColor() != this->getColor())
                 return true;
         } else {
-            if (getChessboard()->getSquareAt(this->getPosition()->getFile() - 1, this->getPosition()->getRank())->isOccupied()) {
-                if (getChessboard()->getSquareAt(this->getPosition()->getFile() - 1, this->getPosition()->getRank())->getOccupant()->canBeCapturedEnPassant()) {
-                    if (getChessboard()->getSquareAt(this->getPosition()->getFile() - 1, this->getPosition()->getRank())->getOccupant()->getColor() != this->getColor()) {
+            if (getChessboard()->getSquareAt(this->getFile() - 1, this->getRank())->isOccupied()) {
+                if (getChessboard()->getSquareAt(this->getFile() - 1, this->getRank())->getOccupant()->canBeCapturedEnPassant()) {
+                    if (getChessboard()->getSquareAt(this->getFile() - 1, this->getRank())->getOccupant()->getColor() != this->getColor()) {
                         return true;
                     }
                 }
             }
         }
     }
+
+    return false;
 }
 

@@ -49,43 +49,39 @@ Chessboard::Chessboard() {
 
 Square* Chessboard::getSquareAt(int file , int rank) {
     if (((0 <= file) && (file <= 7)) && ((0 <= rank) && (rank <= 7)) == false) {
-        return NULL;
+        return nullptr;
     }
 
     return &chessboard[file][rank];
 }
 
-bool Chessboard::isRankClear(Square *from, Square *to) {
-    if(from->getRank() < to->getRank()){
-        for (int i = from->getRank(); i <= to->getRank(); i++) {
-            if (chessboard[i][from->getFile()].isOccupied()) {
-                return false;
-            }
-        }
-    } else if (from->getRank() > to->getRank()) {
-        for (int i = from->getRank(); i >= to->getRank(); i--) {
-            if (chessboard[i][from->getFile()].isOccupied()) {
-                return false;
-            }
-        }
-    } else {
-        if (chessboard[from->getRank()][from->getFile()].isOccupied()) {
-            return false;
-        }
-    }
+bool isRankClear(int rakn, int from_file, int to_file) {
+    // if(from->getRank() < to->getRank()){
+    //     for (int i = from->getRank(); i <= to->getRank(); i++) {
+    //         if (chessboard[i][from->getFile()].isOccupied()) {
+    //             return false;
+    //         }
+    //     }
+    // } else if (from->getRank() > to->getRank()) {
+    //     for (int i = from->getRank(); i >= to->getRank(); i--) {
+    //         if (chessboard[i][from->getFile()].isOccupied()) {
+    //             return false;
+    //         }
+    //     }
+    // } else {
+    //     if (chessboard[from->getRank()][from->getFile()].isOccupied()) {
+    //         return false;
+    //     }
+    // }
 
     return true;
 }
 
-bool Chessboard::isFileClear(Square *from, Square *to) {
-    from->getRank();
-    to->getRank();
+bool Chessboard::isFileClear(int file, int from_rank, int to_rank) {
     return false;
 }
 
-bool Chessboard::isDiagonalClear(Square *from, Square *to) {
-    from->getRank();
-    to->getRank();
+bool Chessboard::isDiagonalClear(int from_file, int to_file, int from_rank, int to_rank) {
     return false;
 }
 

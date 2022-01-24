@@ -4,7 +4,7 @@
 
 class Queen : public Piece {
 private:
-    bool checkMove(Square *destination_square) override;
+    bool checkMove(int de_file, int de_rank) override;
 
 public:
     Queen(Color color, Chessboard *chessboard);

@@ -14,16 +14,21 @@ Type Piece::getType() {
     return this->type;
 }
 
-Square* Piece::getPosition() {
-    return this->position;
+int Piece::getFile() {
+    return this->file;
+}
+
+int Piece::getRank() {
+    return this->rank;
 }
 
 Chessboard* Piece::getChessboard() {
     return this->chessboard;
 }
 
-void Piece::setPosition(Square *position) {
-    this->position = position;
+void Piece::setPosition(int rank, int file) {
+    this->file = file;
+    this->rank = rank;
 }
 
 bool Piece::canBeCapturedEnPassant() {

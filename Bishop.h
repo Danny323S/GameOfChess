@@ -4,7 +4,7 @@
 
 class Bishop : public Piece {
 private:
-    bool checkMove(Square *destination_square) override;
+    bool checkMove(int de_file, int de_rank) override;
 
 public:
     Bishop(Color color, Chessboard *chessboard);

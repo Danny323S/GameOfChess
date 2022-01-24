@@ -4,6 +4,7 @@ Rook::Rook(Color color, Chessboard *chessboard) : RestrictedPiece(color, chessbo
     this->type = Type::TRook;
 }
 
-bool Rook::checkMove(Square *destination_square) {                                                   
-    std::cout << "move Rook\n";
+bool Rook::checkMove(int de_file, int de_rank) {                                                   
+    std::cout << "de_file: " << de_file << ", " << "de_rank: " << de_rank << std::endl;
+    return false;
 }

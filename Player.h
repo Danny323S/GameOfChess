@@ -3,7 +3,8 @@
 #include <string>
 #include <vector>
 // #include "Piece.h"
-#include "ChessBoard.h"
+#include "Chessboard.h"
+
 
 class Player {
 private:

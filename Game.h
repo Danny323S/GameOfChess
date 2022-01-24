@@ -1,8 +1,10 @@
 #ifndef GAME_H
 #define GAME_H
 #include <string.h>
+#include "Chessboard.h"
 #include "DisplayManager.h"
 #include "Player.h"
+
 
 
 class Game {

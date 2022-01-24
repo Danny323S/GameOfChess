@@ -3,19 +3,18 @@
 #include <bits/stdc++.h>
 #include <typeinfo>
 #include "Color.h"
+// #include "Chessboard.h"
+class Chessboard;
 
-// #include "ChessBoard.h"
-#include "Square.h"
-
-// class Square;// forward-declaration
-class Chessboard;// forward-declaration
 
 enum Type {TPiece, TPawn, TKing, TQueen, TRook, TBishop, TKnight};
 
 class Piece {
 private:
+    int file;
+    int rank;
+
     Color color;
-    Square *position;
     Chessboard *chessboard; 
 
 protected:
@@ -26,12 +25,14 @@ public:
 
     Color getColor(); 
     Type getType();
-    Square* getPosition();
-    Chessboard* getChessboard();
+    int getFile();
+    int getRank();
+    
+    void setPosition(int file, int rank);
 
-    virtual bool checkMove(Square *destination_square) = 0;  
+    Chessboard* getChessboard();                       
+    virtual bool checkMove(int de_file, int de_rank) = 0; //destination file, rank
     virtual bool canBeCapturedEnPassant();
-    void setPosition(Square *position);
 };
 
 #endif

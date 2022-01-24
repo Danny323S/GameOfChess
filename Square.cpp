@@ -24,6 +24,7 @@ bool Square::isOccupied() {
 
 void Square::setOccupant(Piece* occupant) {
     this->occupant = occupant;
+    occupant->setPosition(this->file, this->rank);
 }
 
 Piece* Square::getOccupant () {

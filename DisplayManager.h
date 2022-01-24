@@ -5,7 +5,9 @@
 #include <typeinfo>
 #include <iostream>
 #include <windows.h>
-#include "ChessBoard.h"
+#include "Color.h"
+// #include "Piece.h"
+#include "Chessboard.h"
 
 class DisplayManager {
 private:

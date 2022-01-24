@@ -1,14 +1,15 @@
 #ifndef CHESSBOARD_H
 #define CHESSBOARD_H
 #include <vector>
-#include "Piece.h"
+#include "Square.h"
+#include "Pawn.h"
+#include "Queen.h"
 #include "Rook.h"
 #include "King.h"
 #include "Knight.h"
-#include "Queen.h"
-#include "Pawn.h"
 #include "Bishop.h"
-#include "Square.h"
+#include "Pawn.h"
+
 
 #define DIMENSION 8
 
@@ -22,11 +23,14 @@ private:
     // std::vector<Piece> black_set;
 public: 
     Chessboard();
-    Square* getSquareAt(int rank, int file);
+    Square* getSquareAt(int file, int rank);
     
-    bool isRankClear(Square *from, Square *to);
-    bool isFileClear(Square *from, Square *to);
-    bool isDiagonalClear(Square *from, Square *to);
+    bool isRankClear(int rakn, int from_file, int to_file);
+    bool isFileClear(int file, int from_rank, int to_rank);
+    bool isDiagonalClear(int from_file, int to_file, int from_rank, int to_rank);
+
+    // bool isFileClear(Square *from, Square *to);
+    // bool isDiagonalClear(Square *from, Square *to);
 
     void promote();
     void capture();

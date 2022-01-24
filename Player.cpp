@@ -33,17 +33,16 @@ bool Player::movePiece(int file, int rank) {
     // selected_piece -> moveAt Square(rank, file),
     //Na podstawie, schematu ruchów pionka oraz sytuacji na SDzachownicy oceniana jest możliwość 
     //Wykonania danego ruchu i odbywa się on bądź nie
-
     //Sprawdzenie czy pionek może poruszyć się na dane pole 
-    if(selected_piece->checkMove(chessboard->getSquareAt(file, rank))) {
+    if(selected_piece->checkMove(file, rank)) {
         //Zmiana ustawienia na szachwonicy
-        selected_piece->getPosition()->setOccupant(NULL);
+        chessboard->getSquareAt(selected_piece->getFile(), selected_piece->getRank())->setOccupant(nullptr);
         chessboard->getSquareAt(file, rank)->setOccupant(selected_piece);
-        selected_piece = NULL;
+        selected_piece = nullptr;
         return true;
     } else {
         std::cout << "Pozycja nie zgodna ze schematem ruchow pionka. \n";
-        selected_piece = NULL;
+        selected_piece = nullptr;
         return false;
     }
 }
