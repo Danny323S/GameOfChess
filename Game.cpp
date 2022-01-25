@@ -4,7 +4,7 @@ Game::Game() : board(), display_manager(board), w_player(white ,board), b_player
     is_running = true;
     white_round = true;
 
-    display_manager.render();
+    // display_manager.render();
 }
 
 bool Game::run() {
@@ -49,9 +49,9 @@ void Game::control() {
     }
 
     while (!turn_end) {
-        if (actual_player->getSelectedPiece() == NULL) {
+        if (actual_player->getSelectedPiece() == nullptr) {
 
-            std::cout << "wybierz bierke\n";
+            std::cout << "wybierz bierke ";
             std::cout << "(kolumna, rzad): \n";
             std::cin >> input;
             std::cout << "input: " << input << std::endl;
@@ -67,7 +67,7 @@ void Game::control() {
 
             std::cout << "wybrana bierka: (" << file << ", " << rank << ")\n\n";
         } else {
-            std::cout << "Gdzie poruszyc bierke?\n";
+            std::cout << "Gdzie poruszyc bierke? ";
             std::cout << "(kolumna, rzad): \n";
             std::cin >> input;
             std::cin.clear();
@@ -75,7 +75,7 @@ void Game::control() {
             file = (int)input[0] - 48;
             rank = (int)input[1] - 48;
 
-            if( actual_player->movePiece(file, rank)){
+            if(actual_player->movePiece(file, rank)){
                 white_round = !white_round;
                 turn_end = true;
             }

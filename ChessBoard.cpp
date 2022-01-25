@@ -48,9 +48,9 @@ Chessboard::Chessboard() {
 }
 
 Square* Chessboard::getSquareAt(int file , int rank) {
-    if (((0 <= file) && (file <= 7)) && ((0 <= rank) && (rank <= 7)) == false) {
-        return nullptr;
-    }
+    // if (((0 <= file) && (file <= 7)) && ((0 <= rank) && (rank <= 7)) == false) {
+    //     return nullptr;
+    // }
 
     return &chessboard[file][rank];
 }

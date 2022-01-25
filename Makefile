@@ -1,5 +1,5 @@
 CC=g++ -I src/include
-CFLAGS=-c -Wall -Wextra -g
+CFLAGS=-c -Wall -Wextra -g3
 
 all: GameOfChess run
 

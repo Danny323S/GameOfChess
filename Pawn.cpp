@@ -14,6 +14,7 @@ bool Pawn::canBeCapturedEnPassant() {
 }
 
 bool Pawn::checkMove(int de_file, int de_rank) {
+    std::cout << "Sprawdzenie możliwości ruchu dla Pawn \n";
 //Możliwe ruchy 
 //BIAŁY PION (0,1) - ruch podstawowy. możliwy jeżeli na polu nie stoi żaden inny pionek 
 //           (0,2) - ruch specjalny, możliwy jeżeli bierka nie była wcześniej ruszona (wasItMoved == false), jeżeli pole po drodze jest puste i to pole także, 
@@ -31,9 +32,17 @@ bool Pawn::checkMove(int de_file, int de_rank) {
         y_direction = -1;
     }
 
+    // std::cout << "de_file:" <<de_file;
+    // std::cout << ", de_rank:" <<de_rank;
+    // std::cout << ",  this->getFile():" << this->getFile();
+    // std::cout << ",  this->getRank():" <<  this->getRank() << std::endl;
+
     if (de_file == this->getFile() && de_rank == this->getRank() + 1*y_direction) {
-        if (!getChessboard()->getSquareAt(de_file, de_rank)->isOccupied())
+        if (getChessboard()->getSquareAt(de_file, de_rank)->isOccupied() == false) {
+            // std::cout << "returning true: \n";
             return true;
+        }
+
     } else if (de_file == this->getFile() && de_rank == this->getRank() + 2*y_direction) {
         //sprwdzenie czy pionek był ruszany 
         //sprawdzenie czy na drodze nie stoi żadna inna bierka

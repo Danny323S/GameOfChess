@@ -20,9 +20,10 @@ void Player::selectPiece(int file, int rank) {
     //bierka jest wybierana.
     // board->getSquareAt(rank, file)
 
-    if(chessboard->getSquareAt(file, rank)->isOccupied() && chessboard->getSquareAt(file, rank)->getOccupant()->getColor() == this->color) {
-        selected_piece = chessboard->getSquareAt(file, rank)->getOccupant();
-    }
+    if(chessboard->getSquareAt(file, rank)->isOccupied()) {
+        if (chessboard->getSquareAt(file, rank)->getOccupant()->getColor() == this->color)
+            selected_piece = chessboard->getSquareAt(file, rank)->getOccupant();
+    }    
 }
 
 //funkcja zwraca wartość true jezeli pionek został poruszony
@@ -36,9 +37,16 @@ bool Player::movePiece(int file, int rank) {
     //Sprawdzenie czy pionek może poruszyć się na dane pole 
     if(selected_piece->checkMove(file, rank)) {
         //Zmiana ustawienia na szachwonicy
-        chessboard->getSquareAt(selected_piece->getFile(), selected_piece->getRank())->setOccupant(nullptr);
+        std::cout << "Przesuwanie pionka. \n";
+        std::cout << "Selected p file: " << selected_piece->getFile();
+        std::cout << ", Selected p rank:" <<selected_piece->getRank() << std::endl;
+
+        chessboard->getSquareAt(selected_piece->getFile(), selected_piece->getRank())->setOccupant(NULL);
+        std::cout << "Przesuwanie pionka1. \n";
         chessboard->getSquareAt(file, rank)->setOccupant(selected_piece);
+        std::cout << "Przesuwanie pionka2. \n";
         selected_piece = nullptr;
+        std::cout << "returning. \n";
         return true;
     } else {
         std::cout << "Pozycja nie zgodna ze schematem ruchow pionka. \n";

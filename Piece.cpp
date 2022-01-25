@@ -26,7 +26,7 @@ Chessboard* Piece::getChessboard() {
     return this->chessboard;
 }
 
-void Piece::setPosition(int rank, int file) {
+void Piece::setPosition(int file, int rank) {
     this->file = file;
     this->rank = rank;
 }

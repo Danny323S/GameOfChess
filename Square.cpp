@@ -1,8 +1,8 @@
 #include "Square.h"
 
 Square::Square(int file, int rank) {
-    this->rank = rank;
     this->file = file;
+    this->rank = rank;
     occupant = nullptr;
 }
 
@@ -23,8 +23,12 @@ bool Square::isOccupied() {
 }
 
 void Square::setOccupant(Piece* occupant) {
-    this->occupant = occupant;
-    occupant->setPosition(this->file, this->rank);
+    if (occupant == nullptr) {
+        this->occupant = occupant;
+    } else {
+        this->occupant = occupant;
+        occupant->setPosition(this->file, this->rank);
+    }
 }
 
 Piece* Square::getOccupant () {

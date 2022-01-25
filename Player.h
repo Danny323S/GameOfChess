@@ -2,7 +2,6 @@
 #define PLAYER_H
 #include <string>
 #include <vector>
-// #include "Piece.h"
 #include "Chessboard.h"
 
 
