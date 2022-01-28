@@ -1,6 +1,6 @@
 #ifndef PIECE_H
 #define PIECE_H
-#include <bits/stdc++.h>
+#include <iostream>
 #include <typeinfo>
 #include "Color.h"
 // #include "Chessboard.h"
@@ -22,6 +22,7 @@ protected:
 
 public:
     Piece(Color color, Chessboard *chessboard);
+    virtual ~Piece();
 
     Color getColor(); 
     Type getType();

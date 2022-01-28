@@ -11,6 +11,7 @@ private:
 
 public:
     Pawn(Color color, Chessboard *chessboard);
+    virtual ~Pawn();
 }; 
 
 #endif

@@ -4,6 +4,11 @@ Pawn::Pawn(Color color, Chessboard *chessboard) : RestrictedPiece(color, chessbo
     this->type = Type::TPawn;
 }
 
+Pawn::~Pawn() {
+    std::cout << "Pawn destructed\n";
+}
+
+
 bool Pawn::canBeCapturedEnPassant() {
     if ((this->getColor() == white && this->getRank() == 3) || (this->getColor() == black && this->getRank() == 4)) {
         if (this->en_passant_move == true ) {

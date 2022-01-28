@@ -6,6 +6,10 @@ Piece::Piece(Color color, Chessboard *chessboard) {
     this->chessboard = chessboard;
 }
 
+Piece::~Piece() {
+    std::cout << "Piece destructed\n";
+}
+
 Color Piece::getColor() {
     return this->color;
 }

@@ -8,7 +8,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # Ten program zosta� zbudowany dla i386-pc-mingw32
  
 
-# Baza danych Make, wy�wietlana na Sun Jan 23 17:46:21 2022
+# Baza danych Make, wy�wietlana na Thu Jan 27 00:14:31 2022
 
 # Zmienne
 
@@ -33,8 +33,7 @@ HOMEDRIVE = C:
 # automatyczna
 ^D = $(patsubst %/,%,$(dir $^))
 # makefile
-CURDIR := d:/Studia/PJC/GameO 
-fChess
+CURDIR := d:/Studia/PJC/GameOfChess
 # domy�lna
 SHELL := sh.exe
 # �rodowiskowa
@@ -46,7 +45,7 @@ VBOX_MSI_INSTALL_PATH = D:\Programs\VirtualBox\
 # �rodowiskowa
 PYCHARM COMMUNITY EDITION = D:\Programs\PyCharm Community Edition 2021.3\bin;
 # makefile (z `makefile', linia 2)
-CFLAGS = -c -Wall -Wextra -g
+CFLAGS = -c -Wall -Wextra -g3
 # �rodowiskowa
 ONEDRIVE = C:\Users\huawei\OneDrive
 # �rodowiskowa
@@ -62,11 +61,11 @@ PROGRAMW6432 = C:\Program Files
 # �rodowiskowa
 PROGRAMDATA = C:\ProgramData
 # �rodowiskowa
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-9035cf4f-f6b6-4925-8c2f-ab153b1ffe74-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-0d94edf7-f67b-4997-9cf4-6b6dff490bef-sock
 # �rodowiskowa
 VSCODE_CWD = D:\Studia\PJC\GameOfChess
 # �rodowiskowa
-PATH = D:\Programs\Anaconda3;D:\Programs\Anaconda3\Library\mingw-w64\bin;D:\Programs\Anaconda3\Library\usr\bin;D:\Programs\Anaconda3\Library\bin;D:\Programs\Anaconda3\Scripts;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\MinGW\bin;C:\Users\huawei\AppData\Local\Microsoft\WindowsApps;D:\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk-17\bin;D:\Programs\CMake\bin;C:\Program Files (x86)\GnuWin32\bin;D:\Programs\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\huawei\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\huawei\AppData\Local\Programs\Python\Python310\;C:\Users\huawei\AppData\Local\Microsoft\WindowsApps;D:\Programs\Microsoft VS Code\bin;C:\ProgramData\huawei\GitHubDesktop\bin;;D:\Programs\PyCharm Community Edition 2021.3\bin;;C:\Users\huawei\.dotnet\tools
+PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\Programs\Anaconda3;D:\Programs\Anaconda3\Library\mingw-w64\bin;D:\Programs\Anaconda3\Library\usr\bin;D:\Programs\Anaconda3\Library\bin;D:\Programs\Anaconda3\Scripts;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\MinGW\bin;C:\Users\huawei\AppData\Local\Microsoft\WindowsApps;D:\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk-17\bin;D:\Programs\CMake\bin;C:\Program Files (x86)\GnuWin32\bin;D:\Programs\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\huawei\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\huawei\AppData\Local\Programs\Python\Python310\;C:\Users\huawei\AppData\Local\Microsoft\WindowsApps;D:\Programs\Microsoft VS Code\bin;C:\ProgramData\huawei\GitHubDesktop\bin;D:\Programs\PyCharm Community Edition 2021.3\bin;;C:\Users\huawei\.dotnet\tools;C:\ProgramData\Huawei\GitHubDesktop\bin
 # �rodowiskowa
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # �rodowiskowa
@@ -86,7 +85,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatyczna
 %F = $(notdir $%)
 # �rodowiskowa
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_14016_HTJCDDXEFWFHBLMY
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_17808_ZJGXRIAXJJVTJUBV
 # �rodowiskowa
 VSCODE_PIPE_LOGGING = true
 # �rodowiskowa
@@ -113,6 +112,8 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
 # �rodowiskowa
 LOGONSERVER = \\LAPTOP-KBOV4AJ0
+# �rodowiskowa
+ONEDRIVECONSUMER = C:\Users\huawei\OneDrive
 # �rodowiskowa
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # �rodowiskowa
@@ -174,11 +175,10 @@ TEMP = C:\Users\huawei\AppData\Local\Temp
 # �rodowiskowa
 COMSPEC = C:\WINDOWS\system32\cmd.exe
 # domy�lna
-MAKEFILES := 
+M 
+AKEFILES := 
 # automatyczna
 <F = $(notdir $<)
-# �rodowiskowa
-VS160COMCOMNTOOLS = D:\Programs\Microsoft Visual Studio\2019\Community\Common7\Tools\
 # �rodowiskowa
 LC_ALL = C
 # automatyczna
@@ -198,7 +198,7 @@ LANG = C
 # �rodowiskowa
 PROCESSOR_LEVEL = 23
 # �rodowiskowa
-VSCODE_PID = 14016
+VSCODE_PID = 17808
 # �rodowiskowa
 USERDOMAIN_ROAMINGPROFILE = LAPTOP-KBOV4AJ0
 # statystyki tablic haszuj�cych ustawionych zmiennych:
@@ -218,7 +218,7 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-KBOV4AJ0
 # D:\Programs\Git\cmd (klucz D:/Programs/Git/cmd, czas modyfikacji 1636326273): 8 pliki, nie niemo�liwo�ci.
 # C:\WINDOWS\System32\WindowsPowerShell\v1.0\ (klucz C:/WINDOWS/System32/WindowsPowerShell/v1.0/, czas modyfikacji 1631236738): 30 pliki, nie niemo�liwo�ci.
 # C:\WINDOWS\System32\Wbem (klucz C:/WINDOWS/System32/Wbem, czas modyfikacji 1642271460): 155 pliki, nie niemo�liwo�ci.
-# . (klucz d:/Studia/PJC/GameOfChess, czas modyfikacji 1642956062): 36 pliki, nie niemo�liwo�ci.
+# . (klucz d:/Studia/PJC/GameOfChess, czas modyfikacji 1643238865): 37 pliki, nie niemo�liwo�ci.
 # D:\Programs\Anaconda3\Library\usr\bin: stat() zwraca b��d.
 # C:\Users\huawei\AppData\Local\Programs\Python\Python310\ (klucz C:/Users/huawei/AppData/Local/Programs/Python/Python310/, czas modyfikacji 1639307250): 19 pliki, nie niemo�liwo�ci.
 # D:\Programs\Anaconda3\Library\bin (klucz D:/Programs/Anaconda3/Library/bin, czas modyfikacji 1639337225): 451 pliki, nie niemo�liwo�ci.
@@ -226,10 +226,10 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-KBOV4AJ0
 # C:\Program Files\dotnet\ (klucz C:/Program Files/dotnet/, czas modyfikacji 1641841606): 11 pliki, nie niemo�liwo�ci.
 # D:\Programs\Anaconda3\Scripts (klucz D:/Programs/Anaconda3/Scripts, czas modyfikacji 1639339561): 342 pliki, nie niemo�liwo�ci.
 # C:\MinGW\bin (klucz C:/MinGW/bin, czas modyfikacji 1635235823): 144 pliki, nie niemo�liwo�ci.
-# C:\Program Files\MySQL\MySQL Shell 8.0\bin\: stat() zwraca b��d.
 # D:\Programs\Anaconda3\Library\mingw-w64\bin (klucz D:/Programs/Anaconda3/Library/mingw-w64/bin, czas modyfikacji 1639337175): 15 pliki, nie niemo�liwo�ci.
 # C:\Users\huawei\.dotnet\tools: stat() zwraca b��d.
 # C:\WINDOWS\System32\OpenSSH\: stat() zwraca b��d.
+# C:\Program Files (x86)\Common Files\Oracle\Java\javapath (klucz C:/Program Files (x86)/Common Files/Oracle/Java/javapath, czas modyfikacji 1642850758): 5 pliki, nie niemo�liwo�ci.
 # D:\Programs\CMake\bin (klucz D:/Programs/CMake/bin, czas modyfikacji 1631229269): 7 pliki, nie niemo�liwo�ci.
 # D:\Programs\PyCharm Community Edition 2021.3\bin (klucz D:/Programs/PyCharm Community Edition 2021.3/bin, czas modyfikacji 1639339138): 29 pliki, nie niemo�liwo�ci.
 # C:\Program Files\Java\jdk-17\bin (klucz C:/Program Files/Java/jdk-17/bin, czas modyfikacji 1633439284): 123 pliki, nie niemo�liwo�ci.
@@ -241,10 +241,10 @@ USERDOMAIN_ROAMINGPROFILE = LAPTOP-KBOV4AJ0
 # C:\Users\huawei\AppData\Local\Microsoft\WindowsApps (klucz C:/Users/huawei/AppData/Local/Microsoft/WindowsApps, czas modyfikacji 1642880268): 28 pliki, nie niemo�liwo�ci.
 # C:\Program Files\Razer Chroma SDK\bin (klucz C:/Program Files/Razer Chroma SDK/bin, czas modyfikacji 1632983249): 4 pliki, nie niemo�liwo�ci.
 # D:\Programs\Microsoft VS Code\bin (klucz D:/Programs/Microsoft VS Code/bin, czas modyfikacji 1639751216): 4 pliki, nie niemo�liwo�ci.
-# C:\WINDOWS\system32 (klucz C:/WINDOWS/system32, czas modyfikacji 1642852356): 2909 pliki, nie niemo�liwo�ci.
+# C:\WINDOWS\system32 (klucz C:/WINDOWS/system32, czas modyfikacji 1643190970): 2909 pliki, nie niemo�liwo�ci.
 # C:\Program Files (x86)\GnuWin32\bin (klucz C:/Program Files (x86)/GnuWin32/bin, czas modyfikacji 1635895394): 5 pliki, nie niemo�liwo�ci.
 
-# 4654 pliki, nie niemo�liwo�ci w 33 katalogach.
+# 4660 pliki, nie niemo�liwo�ci w 33 katalogach.
 
 # Regu�y stadardowe
 
@@ -335,7 +335,7 @@ Game.cpp:
 # To nie jest obiekt:
 makefile:
 #  Szukanie regu� domy�lnych zosta�o wykonane.
-#  Ostatnio modyfikowany 2022-01-23 17:44:40
+#  Ostatnio modyfikowany 2022-01-25 11:08:58
 #  Plik zosta� uaktualniony.
 #  Uaktualnienie powiod�o si�.
 # statystyki tablic haszuj�cych ustawionych zmiennych:
@@ -358,7 +358,7 @@ King.o: King.cpp
 # To nie jest obiekt:
 main.cpp:
 #  Szukanie regu� domy�lnych zosta�o wykonane.
-#  Ostatnio modyfikowany 2022-01-17 23:05:55
+#  Ostatnio modyfikowany 2022-01-25 10:47:47
 #  Plik zosta� uaktualniony.
 #  Uaktualnienie powiod�o si�.
 # statystyki tablic haszuj�cych ustawionych zmiennych:
@@ -541,6 +541,6 @@ Player.o: Player.cpp
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Zako�czono tworzenie bazy danych Make na Sun Jan 23 17:46:21 2022
+# Zako�czono tworzenie bazy danych Make na Thu Jan 27 00:14:31 2022
 
  

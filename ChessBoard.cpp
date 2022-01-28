@@ -45,6 +45,10 @@ Chessboard::Chessboard() {
     chessboard[5][1].setOccupant(new Pawn(white, this));
     chessboard[6][1].setOccupant(new Pawn(white, this));
     chessboard[7][1].setOccupant(new Pawn(white, this));
+
+    capture(0,1);
+    // this->getSquareAt(0, 1)->getOccupant()->getFile();
+    // this->getSquareAt(0, 1)->getOccupant()->getRank();
 }
 
 Square* Chessboard::getSquareAt(int file , int rank) {
@@ -55,38 +59,78 @@ Square* Chessboard::getSquareAt(int file , int rank) {
     return &chessboard[file][rank];
 }
 
-bool isRankClear(int rakn, int from_file, int to_file) {
-    // if(from->getRank() < to->getRank()){
-    //     for (int i = from->getRank(); i <= to->getRank(); i++) {
-    //         if (chessboard[i][from->getFile()].isOccupied()) {
-    //             return false;
-    //         }
-    //     }
-    // } else if (from->getRank() > to->getRank()) {
-    //     for (int i = from->getRank(); i >= to->getRank(); i--) {
-    //         if (chessboard[i][from->getFile()].isOccupied()) {
-    //             return false;
-    //         }
-    //     }
-    // } else {
-    //     if (chessboard[from->getRank()][from->getFile()].isOccupied()) {
-    //         return false;
-    //     }
-    // }
+bool Chessboard::isRankClear(int rakn, int from_file, int to_file) {
+    int from = 0, to = 0;
+
+    if (to_file >= from_file) {
+        to = to_file;
+        from = from_file;
+    } else {
+        to = from_file;
+        from = to_file;
+    }
+
+    for (int i = from; i <= to; i++) {
+        if(this->getSquareAt(i, rakn)->isOccupied())
+            return false;
+    } 
 
     return true;
 }
 
 bool Chessboard::isFileClear(int file, int from_rank, int to_rank) {
+    int from = 0, to = 0;
+
+    if (to_rank >= from_rank) {
+        to = to_rank;
+        from = from_rank;
+    } else {
+        to = from_rank;
+        from = to_rank;
+    }
+
+    for (int i = from; i <= to; i++) {
+        if(this->getSquareAt(file, i)->isOccupied())
+            return false;
+    } 
+
+    return true;
+}
+
+bool Chessboard::isDiagonalClear(int from_file, int from_rank, int to_file, int to_rank) {
+    int from_f = 0, from_r = 0, to_f = 0, to_r = 0;
+
+    if (from_file <= to_file) {
+        from_f = from_file;
+        to_f = to_file; 
+        from_r = from_rank;
+        to_r = to_rank;
+    } else {
+        from_f = to_file;
+        to_f = from_file; 
+        from_r = to_rank;
+        to_r = from_rank;        
+    }
+
+    if (from_r <= to_r) {
+        for (int i = 0; i <= to_r - from_r; i++) {
+            if(this->getSquareAt(from_f + i, from_r + i)->isOccupied())
+                return false;
+        }
+    } else {
+        for (int i = 0; i <= from_r - to_r; i++) {
+            if(this->getSquareAt(from_f - i, from_r - i)->isOccupied())
+                return false;
+        }
+    }
+
     return false;
 }
 
-bool Chessboard::isDiagonalClear(int from_file, int to_file, int from_rank, int to_rank) {
-    return false;
+void Chessboard::capture(int file, int rank) {
+    delete this->getSquareAt(file, rank)->getOccupant();
+    this->getSquareAt(file, rank)->setOccupant(nullptr);
 }
-
-
-
 
 
 
