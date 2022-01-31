@@ -45,10 +45,6 @@ Chessboard::Chessboard() {
     chessboard[5][1].setOccupant(new Pawn(white, this));
     chessboard[6][1].setOccupant(new Pawn(white, this));
     chessboard[7][1].setOccupant(new Pawn(white, this));
-
-    capture(0,1);
-    // this->getSquareAt(0, 1)->getOccupant()->getFile();
-    // this->getSquareAt(0, 1)->getOccupant()->getRank();
 }
 
 Square* Chessboard::getSquareAt(int file , int rank) {
@@ -98,16 +94,16 @@ bool Chessboard::isFileClear(int file, int from_rank, int to_rank) {
 }
 
 bool Chessboard::isDiagonalClear(int from_file, int from_rank, int to_file, int to_rank) {
-    int from_f = 0, from_r = 0, to_f = 0, to_r = 0;
+    int from_f = 0, from_r = 0, /*to_f = 0,*/ to_r = 0;
 
     if (from_file <= to_file) {
         from_f = from_file;
-        to_f = to_file; 
+        // to_f = to_file; 
         from_r = from_rank;
         to_r = to_rank;
     } else {
         from_f = to_file;
-        to_f = from_file; 
+        // to_f = from_file; 
         from_r = to_rank;
         to_r = from_rank;        
     }

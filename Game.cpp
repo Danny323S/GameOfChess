@@ -10,13 +10,13 @@ Game::Game() : board(), display_manager(board), w_player(white ,board), b_player
 bool Game::run() {
     while(is_running) {
         display_manager.render();
-        control();
+        turn();
     }
 
     return false;
 }
 
-void Game::control() {
+void Game::turn() {
     // Opis przebiegu tury
     // Gracz którego jest tura musi wybrać pionek
         // Stosowany jest komunikat do geracza aby wybrał swój pionek

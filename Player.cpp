@@ -39,15 +39,21 @@ bool Player::movePiece(int file, int rank) {
     if(selected_piece->checkMove(file, rank)) {
         //Zmiana ustawienia na szachwonicy
         std::cout << "Przesuwanie pionka. \n";
-        std::cout << "Selected p file: " << selected_piece->getFile();
-        std::cout << ", Selected p rank:" <<selected_piece->getRank() << std::endl;
+        std::cout << "Selected piece (file: " << selected_piece->getFile() << ", rank: ";
+        std::cout << selected_piece->getRank() << ")" << std::endl;
 
+        //ustawienie pola na którym poprzednio znajdował się pionek na puste
         chessboard->getSquareAt(selected_piece->getFile(), selected_piece->getRank())->setOccupant(nullptr);
-        std::cout << "Przesuwanie pionka1. \n";
+
+        //jeżeli docelowe pole jest okupowane zbicie znajdującego się na nim pionka
+        if (chessboard->getSquareAt(file, rank)->isOccupied()){
+            chessboard->capture(file, rank);
+        }
+
+        //umieszczenie poruszanego pionka na docelowym polu 
         chessboard->getSquareAt(file, rank)->setOccupant(selected_piece);
-        std::cout << "Przesuwanie pionka2. \n";
         selected_piece = nullptr;
-        std::cout << "returning. \n";
+
         return true;
     } else {
         std::cout << "Pozycja nie zgodna ze schematem ruchow pionka. \n";

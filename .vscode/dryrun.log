@@ -16,6 +16,5 @@ g++ -I src/include -c -Wall -Wextra -g3 RestrictedPiece.cpp
 g++ -I src/include -c -Wall -Wextra -g3 Piece.cpp
 g++ -I src/include main.o Game.o DisplayManager.o Player.o ChessBoard.o Square.o King.o Pawn.o Knight.o Bishop.o Rook.o Queen.o RestrictedPiece.o Piece.o -o GameOfChess -L src/lib -l sfml-graphics -l sfml-window -l sfml-system
 ./GameOfChess
- 
 make.exe: Opuszczenie katalogu `d:/Studia/PJC/GameOfChess'
  

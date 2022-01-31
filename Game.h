@@ -21,7 +21,7 @@ private:
 public:
     Game();
     bool run();
-    void control();    
+    void turn();    
 };
 
 #endif

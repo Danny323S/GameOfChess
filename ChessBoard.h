@@ -28,10 +28,7 @@ public:
     bool isRankClear(int rakn, int from_file, int to_file);
     bool isFileClear(int file, int from_rank, int to_rank);
     bool isDiagonalClear(int from_file, int from_rank, int to_file, int to_rank);
-
-    // bool isFileClear(Square *from, Square *to);
-    // bool isDiagonalClear(Square *from, Square *to);
-
+    
     void promote();
     void capture(int file, int rank);
 };
