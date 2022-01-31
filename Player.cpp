@@ -29,6 +29,7 @@ void Player::selectPiece(int file, int rank) {
 //funkcja zwraca wartość true jezeli pionek został poruszony
 //jeżeli nie zwraca false
 bool Player::movePiece(int file, int rank) {
+    // Piece *piece_to_capture = nullptr;
     //poruszana jest wybrana przez gracza bierka, (selected_piece)
     //tak więc należy najpierw sprawdzić czy jakikolwiek pionek jest wybrany
     // selected_piece -> moveAt Square(rank, file),
@@ -42,10 +43,11 @@ bool Player::movePiece(int file, int rank) {
         std::cout << "Selected piece (file: " << selected_piece->getFile() << ", rank: ";
         std::cout << selected_piece->getRank() << ")" << std::endl;
 
+//###########################################################################################################
         //ustawienie pola na którym poprzednio znajdował się pionek na puste
         chessboard->getSquareAt(selected_piece->getFile(), selected_piece->getRank())->setOccupant(nullptr);
 
-        //jeżeli docelowe pole jest okupowane zbicie znajdującego się na nim pionka
+        //jeżeli docelowe pole jest okupowane -> zbicie znajdującego się na nim pionka
         if (chessboard->getSquareAt(file, rank)->isOccupied()){
             chessboard->capture(file, rank);
         }
@@ -53,6 +55,8 @@ bool Player::movePiece(int file, int rank) {
         //umieszczenie poruszanego pionka na docelowym polu 
         chessboard->getSquareAt(file, rank)->setOccupant(selected_piece);
         selected_piece = nullptr;
+
+//###########################################################################################################
 
         return true;
     } else {

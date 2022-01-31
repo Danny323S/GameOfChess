@@ -21,6 +21,9 @@ private:
     // std::vector<Piece*> pieces;
     // std::vector<Piece> white_set;
     // std::vector<Piece> black_set;
+    //void move();
+    //void capture();
+
 public: 
     Chessboard();
     Square* getSquareAt(int file, int rank);
@@ -28,9 +31,11 @@ public:
     bool isRankClear(int rakn, int from_file, int to_file);
     bool isFileClear(int file, int from_rank, int to_rank);
     bool isDiagonalClear(int from_file, int from_rank, int to_file, int to_rank);
-    
+
     void promote();
-    void capture(int file, int rank);
+    void capture(int piece_file, int piece_rank);
+
+    void update();
 };
 
 #endif

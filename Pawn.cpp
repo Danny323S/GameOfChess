@@ -63,14 +63,14 @@ bool Pawn::checkMove(int de_file, int de_rank) {
     } else if (de_file == this->getFile() + 1 && de_rank == this->getRank() + 1*y_direction) { 
         if (getChessboard()->getSquareAt(de_file, de_rank)->isOccupied()) { //podstawowe bicie
             if (getChessboard()->getSquareAt(de_file, de_rank)->getOccupant()->getColor() != this->getColor()) {
-                getChessboard()->capture(de_file, de_rank);
+                // getChessboard()->capture(de_file, de_rank);
                 return true;
             }
         } else { //bicie w przelocie
             if (getChessboard()->getSquareAt(this->getFile() + 1, this->getRank())->isOccupied()) { 
                 if (getChessboard()->getSquareAt(this->getFile() + 1, this->getRank())->getOccupant()->canBeCapturedEnPassant()) {
                     if (getChessboard()->getSquareAt(this->getFile() + 1, this->getRank())->getOccupant()->getColor() != this->getColor()) {
-                        getChessboard()->capture(de_file , de_rank - 1*y_direction);
+                        // getChessboard()->capture(de_file , de_rank - 1*y_direction);
                         return true;
                     }
                 }
@@ -79,14 +79,14 @@ bool Pawn::checkMove(int de_file, int de_rank) {
     } else if (de_file == this->getFile() - 1 && de_rank == this->getRank() + 1*y_direction) { 
         if (getChessboard()->getSquareAt(de_file, de_rank)->isOccupied()) { //podstawowe bicie
             if (getChessboard()->getSquareAt(de_file, de_rank)->getOccupant()->getColor() != this->getColor()) {
-                getChessboard()->capture(de_file , de_rank);
+                // getChessboard()->capture(de_file , de_rank);
                 return true;
             }
         } else { //bicie w przelocie
             if (getChessboard()->getSquareAt(this->getFile() - 1, this->getRank())->isOccupied()) {
                 if (getChessboard()->getSquareAt(this->getFile() - 1, this->getRank())->getOccupant()->canBeCapturedEnPassant()) {
                     if (getChessboard()->getSquareAt(this->getFile() - 1, this->getRank())->getOccupant()->getColor() != this->getColor()) {
-                        getChessboard()->capture(de_file , de_rank - 1*y_direction);
+                        // getChessboard()->capture(de_file , de_rank - 1*y_direction);
                         return true;
                     }
                 }
