@@ -51,7 +51,14 @@ Piece.o: Piece.cpp
 #.PHONY : clean
 
 clean:
-	del *.o GameOfChess.exe
+	del *.o *.exe
 
 run:
 	./GameOfChess
+
+
+test: #kompilacja i uruchomienie pliku testowego
+	g++ -c test.cpp -I src/include
+	g++ -I src/include test.o -o test -L src/lib -l sfml-graphics -l sfml-window -l sfml-system
+	del test.o
+	./test

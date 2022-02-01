@@ -24,10 +24,11 @@ bool King::checkMove(int de_file, int de_rank, Piece *piece_to_capture) {
         } else if (this->getFile() - de_file == -2 && this->getFile() == de_rank && getChessboard()->isRankClear(0, 5, 6)) {
             if (getChessboard()->getSquareAt(7, this->getRank())) {
                 if (!getChessboard()->getSquareAt(0, this->getRank())->getOccupant()->wasItMoved()) {
-                return true;
+                    return true;
+                }
             }
-        }
-    } 
+        } 
+    }
 
     return false;
 }

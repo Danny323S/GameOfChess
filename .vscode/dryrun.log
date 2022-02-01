@@ -1,20 +1,17 @@
 make.exe --dry-run --always-make --keep-going --print-directory
-make.exe: Wej�cie do katalogu `d:/Studia/PJC/GameOfChess'
-g++ -I src/include -c -Wall -Wextra -g3 main.cpp
-g++ -I src/include -c -Wall -Wextra -g3 Game.cpp
-g++ -I src/include -c -Wall -Wextra -g3 DisplayManager.cpp
-g++ -I src/include -c -Wall -Wextra -g3 Player.cpp
-g++ -I src/include -c -Wall -Wextra -g3 ChessBoard.cpp
-g++ -I src/include -c -Wall -Wextra -g3 Square.cpp
-g++ -I src/include -c -Wall -Wextra -g3 King.cpp
-g++ -I src/include -c -Wall -Wextra -g3 Pawn.cpp
-g++ -I src/include -c -Wall -Wextra -g3 Knight.cpp
-g++ -I src/include -c -Wall -Wextra -g3 Bishop.cpp
-g++ -I src/include -c -Wall -Wextra -g3 Rook.cpp
-g++ -I src/include -c -Wall -Wextra -g3 Queen.cpp
-g++ -I src/include -c -Wall -Wextra -g3 RestrictedPiece.cpp
-g++ -I src/include -c -Wall -Wextra -g3 Piece.cpp
-g++ -I src/include main.o Game.o DisplayManager.o Player.o ChessBoard.o Square.o King.o Pawn.o Knight.o Bishop.o Rook.o Queen.o RestrictedPiece.o Piece.o -o GameOfChess -L src/lib -l sfml-graphics -l sfml-window -l sfml-system
-./GameOfChess
-make.exe: Opuszczenie katalogu `d:/Studia/PJC/GameOfChess'
+make.exe: Wej�cie do katalogu `d:/Studia/PJC/PJC_Szachy'
+g++ -I src/include -c -Wall -Wextra -g main.cpp
+g++ -I src/include -c -Wall -Wextra -g CGame.cpp
+g++ -I src/include -c -Wall -Wextra -g CBoard.cpp
+g++ -I src/include -c -Wall -Wextra -g SPiecesMap.cpp
+g++ -I src/include -c -Wall -Wextra -g CPawn.cpp
+g++ -I src/include -c -Wall -Wextra -g CKnight.cpp
+g++ -I src/include -c -Wall -Wextra -g CBishop.cpp
+g++ -I src/include -c -Wall -Wextra -g CRook.cpp
+g++ -I src/include -c -Wall -Wextra -g CQueen.cpp
+g++ -I src/include -c -Wall -Wextra -g CKing.cpp
+g++ -I src/include -c -Wall -Wextra -g IPiece.cpp
+g++ -I src/include main.o CGame.o CBoard.o SPiecesMap.o CPawn.o CKnight.o CBishop.o CRook.o CQueen.o CKing.o IPiece.o -o Szachy -L src/lib -l sfml-graphics -l sfml-window -l sfml-system
+./Szachy
+make.exe: Opuszczenie katalogu `d:/Studia/PJC/PJC_Szachy'
  

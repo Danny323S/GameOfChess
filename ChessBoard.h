@@ -19,9 +19,9 @@ private:
     // std::vector<Piece> white_set;
     // std::vector<Piece> black_set;
     void capture(int piece_file, int piece_rank);
+    void castling(Piece *piece_to_move, int de_file, int de_rank);
     void move(Piece *piece_to_move, int de_file, int de_rank);
     void promote();
-    void castling();
 
 public: 
     Chessboard();
