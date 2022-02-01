@@ -4,7 +4,7 @@
 #include "Chessboard.h"
 #include "DisplayManager.h"
 #include "Player.h"
-
+#include "MainWindow.h"
 
 
 class Game {
@@ -12,6 +12,7 @@ private:
     bool white_round;
     bool is_running;
 
+    MainWindow window;
     Chessboard board;
     DisplayManager display_manager;
 
