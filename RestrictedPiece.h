@@ -11,7 +11,7 @@ protected:
     void hasMoved();
 
 public:
-    bool wasItMoved();
+    bool wasItMoved() override;
 };
 
 #endif

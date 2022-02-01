@@ -128,8 +128,17 @@ void Chessboard::capture(int file, int rank) {
     this->getSquareAt(file, rank)->setOccupant(nullptr);
 }
 
-void Chessboard::update(/*int de_file, int de_rank, int c_file, int c_rank*/) {
-    //move
-    //capture
+void Chessboard::castling() {
+    
+}
+
+void Chessboard::move(Piece *piece_to_move, int de_file, int de_rank) {
+    getSquareAt(piece_to_move->getFile(), piece_to_move->getRank())->setOccupant(nullptr);
+    getSquareAt(de_file, de_rank)->setOccupant(piece_to_move);
+}
+
+void Chessboard::update(Piece *piece_to_move, int de_file, int de_rank, Piece *piece_to_capture) {
+    capture(piece_to_capture->getFile(), piece_to_capture->getRank());
+    move(piece_to_move, de_file, de_rank);
 }
 

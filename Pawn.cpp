@@ -18,7 +18,7 @@ bool Pawn::canBeCapturedEnPassant() {
 //     return false;
 }
 
-bool Pawn::checkMove(int de_file, int de_rank) {
+bool Pawn::checkMove(int de_file, int de_rank, Piece *piece_to_capture) {
     std::cout << "Sprawdzenie możliwości ruchu dla Pawn \n";
 //Możliwe ruchy 
 //BIAŁY PION (0,1) - ruch podstawowy. możliwy jeżeli na polu nie stoi żaden inny pionek 
@@ -50,11 +50,8 @@ bool Pawn::checkMove(int de_file, int de_rank) {
         //jeżeli bierka zostanie poruszona:
         //1.en_passant_move == true 
         //2.zmiana wasMove == true
-        std:: cout << "test1";
         if(!this->wasItMoved()) {
-            std:: cout << "test2";
             if(getChessboard()->isFileClear(this->getFile(), this->getRank() + 1*y_direction, de_rank) == true) {
-                std:: cout << "test3";
                 this->en_passant_move = true;
                 this->hasMoved(); //Powinno być w klasie gracza
                 return true;
@@ -63,6 +60,8 @@ bool Pawn::checkMove(int de_file, int de_rank) {
     } else if (de_file == this->getFile() + 1 && de_rank == this->getRank() + 1*y_direction) { 
         if (getChessboard()->getSquareAt(de_file, de_rank)->isOccupied()) { //podstawowe bicie
             if (getChessboard()->getSquareAt(de_file, de_rank)->getOccupant()->getColor() != this->getColor()) {
+                //ustawienie wskaźnika na pionek który ma zostać zbity
+                *piece_to_capture = *getChessboard()->getSquareAt(de_file, de_rank)->getOccupant();
                 // getChessboard()->capture(de_file, de_rank);
                 return true;
             }
@@ -70,6 +69,7 @@ bool Pawn::checkMove(int de_file, int de_rank) {
             if (getChessboard()->getSquareAt(this->getFile() + 1, this->getRank())->isOccupied()) { 
                 if (getChessboard()->getSquareAt(this->getFile() + 1, this->getRank())->getOccupant()->canBeCapturedEnPassant()) {
                     if (getChessboard()->getSquareAt(this->getFile() + 1, this->getRank())->getOccupant()->getColor() != this->getColor()) {
+                        *piece_to_capture = *getChessboard()->getSquareAt(de_file, de_rank - 1*y_direction)->getOccupant();
                         // getChessboard()->capture(de_file , de_rank - 1*y_direction);
                         return true;
                     }
@@ -79,6 +79,7 @@ bool Pawn::checkMove(int de_file, int de_rank) {
     } else if (de_file == this->getFile() - 1 && de_rank == this->getRank() + 1*y_direction) { 
         if (getChessboard()->getSquareAt(de_file, de_rank)->isOccupied()) { //podstawowe bicie
             if (getChessboard()->getSquareAt(de_file, de_rank)->getOccupant()->getColor() != this->getColor()) {
+                *piece_to_capture = *getChessboard()->getSquareAt(de_file, de_rank)->getOccupant();
                 // getChessboard()->capture(de_file , de_rank);
                 return true;
             }
@@ -86,6 +87,7 @@ bool Pawn::checkMove(int de_file, int de_rank) {
             if (getChessboard()->getSquareAt(this->getFile() - 1, this->getRank())->isOccupied()) {
                 if (getChessboard()->getSquareAt(this->getFile() - 1, this->getRank())->getOccupant()->canBeCapturedEnPassant()) {
                     if (getChessboard()->getSquareAt(this->getFile() - 1, this->getRank())->getOccupant()->getColor() != this->getColor()) {
+                        *piece_to_capture = *getChessboard()->getSquareAt(de_file, de_rank - 1*y_direction)->getOccupant();
                         // getChessboard()->capture(de_file , de_rank - 1*y_direction);
                         return true;
                     }
@@ -93,7 +95,6 @@ bool Pawn::checkMove(int de_file, int de_rank) {
             }
         }
     }
-
     return false;
 }
 

@@ -30,11 +30,15 @@ Chessboard* Piece::getChessboard() {
     return this->chessboard;
 }
 
-void Piece::setPosition(int file, int rank) {
+void Piece::setPosition(int file, int rank) { // -> to mogę zrobić wirtualną metodą i wklasie RestrictedPiece wywoływać dodatkowo metodę hasMoved   
     this->file = file;
     this->rank = rank;
 }
 
 bool Piece::canBeCapturedEnPassant() {
     return false;
+}
+
+bool Piece::wasItMoved() {
+    return true;
 }

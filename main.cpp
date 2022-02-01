@@ -8,4 +8,4 @@ int main() {
 
     std::cout << "Zakonczenie dzialania programu\n";
     return 0;
-}  
+}

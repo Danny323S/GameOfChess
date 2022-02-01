@@ -4,7 +4,7 @@
 
 class Rook : public RestrictedPiece {
 private:
-    bool checkMove(int de_file, int de_rank) override;
+    bool checkMove(int de_file, int de_rank, Piece *piece_to_capture) override;
 
 public:
     Rook(Color color, Chessboard *chessboard);

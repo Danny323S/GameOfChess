@@ -17,7 +17,7 @@ private:
 
     Player w_player;
     Player b_player;
-
+    
 public:
     Game();
     bool run();
