@@ -1,40 +1,11 @@
-// #include <iostream>
-// #include "Game.h"
-
-// int main() {
-//     Game game;
-
-//     game.run();
-
-//     std::cout << "Zakonczenie dzialania programu\n";
-//     return 0;
-// }
-
-
-#include <SFML/Graphics.hpp>
 #include <iostream>
+#include "MainWindow.h"
 
-int main()
-{
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+int main() {
+    MainWindow GameOfChess; 
 
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
+    GameOfChess.run();
 
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
-
-    std::cout << "end\n";
-
+    std::cout << "Zakonczenie dzialania programu\n";
     return 0;
 }

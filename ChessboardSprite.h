@@ -1,14 +1,25 @@
-#ifndef CHESSBOARDsPRITE_H
-#define MAINWINDOW_H
+#ifndef CHESSBOARDSPRITE_H
+#define CHESSBOARDSPRITE_H
+#include <vector>
 #include <SFML/Graphics.hpp>
+#include "Chessboard.h"
+#include "PieceSprite.h"
+#include "TexturesManager.h"
 
-class MainWindow {
+class ChessboardSprite {
 private:
-    sf::RenderWindow main_window
+    sf::Vector2u window_size;
+    Chessboard *chessboard;
+    std::vector<sf::RectangleShape> squares;
+    std::vector<PieceSprite> pieces_sprites;
+    TexturesManager textures_manager;
 
 public:
-    void render();
+    ChessboardSprite(Chessboard *chessboard);
+    void resize(sf::Vector2u window_size);
 
+    std::vector<sf::RectangleShape> *getSquares();
+    std::vector<PieceSprite> *getPiecesSprites();
 };
 
 #endif
