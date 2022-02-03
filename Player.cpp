@@ -21,48 +21,39 @@ void Player::selectPiece(int file, int rank) {
     // board->getSquareAt(rank, file)
 
     if(chessboard->getSquareAt(file, rank)->isOccupied()) {
-        if (chessboard->getSquareAt(file, rank)->getOccupant()->getColor() == this->color)
-            selected_piece = chessboard->getSquareAt(file, rank)->getOccupant();
-    }    
+        // if (this->color == chessboard->getSquareAt(file, rank)->getOccupant()->getColor())
+        selected_piece = chessboard->getSquareAt(file, rank)->getOccupant();
+    } else {
+        selected_piece = nullptr;
+        std::cout << "Nie wybrano bierki";
+    }   
 }
 
 //funkcja zwraca wartość true jezeli pionek został poruszony
 //jeżeli nie zwraca false
 bool Player::movePiece(int file, int rank) {
-    Piece *piece_to_capture = nullptr;
+    if( selected_piece != nullptr) {
+        Piece *piece_to_capture = nullptr;
     //poruszana jest wybrana przez gracza bierka, (selected_piece)
     //tak więc należy najpierw sprawdzić czy jakikolwiek pionek jest wybrany
     // selected_piece -> moveAt Square(rank, file),
     //Na podstawie, schematu ruchów pionka oraz sytuacji na SDzachownicy oceniana jest możliwość 
     //Wykonania danego ruchu i odbywa się on bądź nie
-
-    //Sprawdzenie czy pionek może poruszyć się na wybrane pole 
-    if(selected_piece->checkMove(file, rank, piece_to_capture)) {
-        //Wykonanie ruchu i ewnetualne bicie
-        
-//aktualizacja szachownicy
-//###########################################################################################################
-
-        chessboard->update(selected_piece, file, rank, piece_to_capture);
-
-        // //ustawienie pola na którym poprzednio znajdował się pionek na puste
-        // chessboard->getSquareAt(selected_piece->getFile(), selected_piece->getRank())->setOccupant(nullptr);
-
-        // //jeżeli docelowe pole jest okupowane -> zbicie znajdującego się na nim pionka
-        // if (chessboard->getSquareAt(file, rank)->isOccupied()){
-        //     chessboard->capture(file, rank);
-        // }
-
-        // //umieszczenie poruszanego pionka na docelowym polu 
-        // chessboard->getSquareAt(file, rank)->setOccupant(selected_piece);
-        // selected_piece = nullptr;
-
-//###########################################################################################################
-
-        return true;
+        if(selected_piece->checkMove(file, rank, piece_to_capture)) {
+            chessboard->update(selected_piece, file, rank, piece_to_capture);
+            return true;
+        } else {
+            std::cout << "Pozycja nie zgodna ze schematem ruchow pionka. \n";
+            selected_piece = nullptr;
+            return false;
+        }
     } else {
-        std::cout << "Pozycja nie zgodna ze schematem ruchow pionka. \n";
-        selected_piece = nullptr;
+        std::cout << "Wybrano pionek przeciwnego kloru lub\n";
+        std::cout << "nie wybrano go wcale\n";
         return false;
     }
+}
+
+Color Player::getColor() {
+    return this->color;
 }

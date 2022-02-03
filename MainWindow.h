@@ -21,6 +21,11 @@ private:
 
     bool quit;
     sf::CircleShape shape;
+
+    int pressed_file_1;
+    int pressed_rank_1;
+    int pressed_file_2;
+    int pressed_rank_2;
 public:
     MainWindow();
     void run();

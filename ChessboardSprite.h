@@ -17,6 +17,7 @@ private:
 public:
     ChessboardSprite(Chessboard *chessboard);
     void resize(sf::Vector2u window_size);
+    void updateSpritesPositions();
 
     std::vector<sf::RectangleShape> *getSquares();
     std::vector<PieceSprite> *getPiecesSprites();

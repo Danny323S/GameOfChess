@@ -3,10 +3,10 @@
 
 ChessboardSprite::ChessboardSprite(Chessboard *chessboard) {
     this->chessboard = chessboard;
-    window_size = sf::Vector2u(1000, 1000);
-    sf::Color color(62, 125, 65);
+   
+    window_size = sf::Vector2u(1000, 1000);  
     textures_manager = TexturesManager();
-
+    sf::Color color(62, 125, 65);
 
 //utworzenie szachwnicy
     for (int y = 0; y < 8; y++) {
@@ -26,19 +26,6 @@ ChessboardSprite::ChessboardSprite(Chessboard *chessboard) {
             }
         }
     }
-    // pieces_sprites.push_back(PieceSprite(chessboard->getSquareAt(0,1)->getOccupant()));
-    // pieces_sprites.back().getSprite()->setTexture(*textures_manager.getTexture(chessboard->getSquareAt(0,1)->getOccupant()));
-    // pieces_sprites.back().setSpritePosition(sf::Vector2f((float)window_size.x/8,(float)window_size.y/8));
-
-    // pieces_sprites.push_back(PieceSprite(chessboard->getSquareAt(7,7)->getOccupant()));
-    // pieces_sprites.back().getSprite()->setTexture(*textures_manager.getTexture(chessboard->getSquareAt(7,7)->getOccupant()));
-    // pieces_sprites.back().setSpritePosition(sf::Vector2f((float)window_size.x/5,(float)window_size.y/5));
-    // pieces_sprites.push_back(PieceSprite(chessboard->getSquareAt(7,7)->getOccupant()));
-    // pieces_sprites.back().getSprite()->setTexture(*textures_manager.getTexture(chessboard->getSquareAt(7,7)->getOccupant()));
-    // pieces_sprites.back().setSpritePosition(sf::Vector2f((7-7)*(window_size.x/8), 7*(window_size.y/8))); 
-
-
-
 
 // utworzenie pionków 
     for (int y = 0; y < 8; y++) {
@@ -66,4 +53,8 @@ std::vector<sf::RectangleShape> *ChessboardSprite::getSquares() {
 
 std::vector<PieceSprite> *ChessboardSprite::getPiecesSprites() {
     return &pieces_sprites;
+}
+
+void ChessboardSprite::updateSpritesPositions() {
+    
 }
